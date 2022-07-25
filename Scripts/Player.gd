@@ -12,7 +12,6 @@ func _ready():
 	screen_size = get_viewport().size
 	$AnimatedSprite.animation = "Idle_right"
 	
-	
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1

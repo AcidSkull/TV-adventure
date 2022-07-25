@@ -1,22 +1,12 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Assets/Player_Spritesheet.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/Player_Spritesheet.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 16, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 16, 32, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 16, 16 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 4
@@ -43,6 +33,11 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 16, 32, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 16, 32, 16, 16 )
+
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
@@ -63,21 +58,16 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 16, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ SubResource( 11 ) ],
 "loop": true,
 "name": "Jump_right",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 12 ) ],
-"loop": true,
-"name": "Jump_left",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 13 ) ],
-"loop": true,
-"name": "Idle_right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 14 ) ],
@@ -90,16 +80,26 @@ animations = [ {
 "name": "Walking_left",
 "speed": 16.0
 }, {
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "Jump_left",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 3 ), SubResource( 2 ) ],
 "loop": true,
 "name": "Walking_right",
 "speed": 16.0
+}, {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "Idle_right",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 6, 6 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
