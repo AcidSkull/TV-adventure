@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/CoinSouind.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Level1.gd" type="Script" id=5]
+[ext_resource path="res://Level1.gd" type="Script" id=5]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 5 )
@@ -18,26 +18,10 @@ tile_data = PoolIntArray( 65535, 1, 0, 19, 1, 0, 131071, 1, 0, 65555, 1, 0, 1966
 [node name="CoinSound" parent="." instance=ExtResource( 4 )]
 
 [node name="Coin" parent="." instance=ExtResource( 3 )]
-position = Vector2( 18, 116 )
-
-[node name="Coin2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 29, 116 )
 
+[node name="Coin2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 42, 116 )
+
 [node name="Coin3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 43, 116 )
-
-[node name="Coin4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 56, 116 )
-
-[node name="Coin5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 42, 102 )
-
-[node name="Coin6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 28, 102 )
-
-[connection signal="coin_collected" from="Coin" to="." method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="Coin2" to="." method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="Coin3" to="." method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="Coin4" to="." method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="Coin5" to="." method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="Coin6" to="." method="_on_Coin_coin_collected"]
+position = Vector2( 53, 116 )

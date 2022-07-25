@@ -4,13 +4,18 @@ export var speed = 150.0
 export var jump_strength = 250.0
 export var gravity = 1000.0
 
-var screen_size
 var velocity = Vector2.ZERO
 var facing_right = true
 
+var coins = 0
+var health = 5
+
 func _ready():
-	screen_size = get_viewport().size
 	$AnimatedSprite.animation = "Idle_right"
+	
+func add_coin():
+	coins += 1
+	print(coins)
 	
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):

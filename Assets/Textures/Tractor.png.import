@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_Spritesheet.png-0df180e1bb906b6c9cfe6271939fda8f.stex"
+path="res://.import/Tractor.png-13b56d9eec7cba2729cd0d29750b1db5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Player_Spritesheet.png"
-dest_files=[ "res://.import/Player_Spritesheet.png-0df180e1bb906b6c9cfe6271939fda8f.stex" ]
+source_file="res://Assets/Textures/Tractor.png"
+dest_files=[ "res://.import/Tractor.png-13b56d9eec7cba2729cd0d29750b1db5.stex" ]
 
 [params]
 
