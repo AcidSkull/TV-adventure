@@ -8,7 +8,7 @@ var velocity = Vector2.ZERO
 var facing_right = true
 
 var coins = 0
-var health = 4
+var health = 5
 
 func _ready():
 	$AnimatedSprite.animation = "Idle_right"
