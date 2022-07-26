@@ -48,9 +48,7 @@ func _physics_process(delta: float) -> void:
 	
 func _on_Coin_coin_collected():
 	coins += 1
-	$CoinSound.play()
 
 func _on_Health_point_heart_collected():
 	if health < 5:
 		health += 1
-		$HealSound.play()

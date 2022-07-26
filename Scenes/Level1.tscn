@@ -5,13 +5,9 @@
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/HealthPoint.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=5]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-"
+[ext_resource path="res://Scenes/Music.tscn" type="PackedScene" id=6]
 
 [node name="Level1" type="Node2D"]
-script = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 152, 119 )
@@ -20,6 +16,8 @@ position = Vector2( 152, 119 )
 position = Vector2( 152, 93 )
 current = true
 script = ExtResource( 5 )
+
+[node name="Music" parent="." instance=ExtResource( 6 )]
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 tile_data = PoolIntArray( 65535, 1, 0, 31, 1, 0, 131071, 1, 0, 65567, 1, 0, 196607, 1, 0, 131103, 1, 0, 262143, 1, 0, 196639, 1, 0, 327679, 1, 0, 262175, 1, 0, 393215, 1, 0, 327711, 1, 0, 458751, 1, 0, 393247, 1, 0, 524287, 1, 0, 458783, 1, 0, 589823, 1, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524311, 0, 0, 524312, 0, 0, 524313, 0, 0, 524314, 0, 0, 524315, 0, 0, 524316, 0, 0, 524317, 0, 0, 524318, 0, 0, 524319, 1, 0, 655359, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 589840, 1, 0, 589841, 1, 0, 589842, 1, 0, 589843, 1, 0, 589844, 1, 0, 589845, 1, 0, 589846, 1, 0, 589847, 1, 0, 589848, 1, 0, 589849, 1, 0, 589850, 1, 0, 589851, 1, 0, 589852, 1, 0, 589853, 1, 0, 589854, 1, 0, 589855, 1, 0, 720895, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 1, 0, 655390, 1, 0, 655391, 1, 0 )
@@ -36,19 +34,16 @@ position = Vector2( 55, 115 )
 [node name="Coin4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 68, 115 )
 
-[node name="Coin5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 55, 103 )
-
-[node name="Coin6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 41, 103 )
-
 [node name="Health_point" parent="." instance=ExtResource( 4 )]
 position = Vector2( 229, 116 )
 
 [connection signal="coin_collected" from="Coin" to="Player" method="_on_Coin_coin_collected"]
+[connection signal="coin_collected" from="Coin" to="Music" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin2" to="Player" method="_on_Coin_coin_collected"]
+[connection signal="coin_collected" from="Coin2" to="Music" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin3" to="Player" method="_on_Coin_coin_collected"]
+[connection signal="coin_collected" from="Coin3" to="Music" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin4" to="Player" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="Coin5" to="Player" method="_on_Coin_coin_collected"]
-[connection signal="coin_collected" from="Coin6" to="Player" method="_on_Coin_coin_collected"]
+[connection signal="coin_collected" from="Coin4" to="Music" method="_on_Coin_coin_collected"]
 [connection signal="heart_collected" from="Health_point" to="Player" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point" to="Music" method="_on_Health_point_heart_collected"]
