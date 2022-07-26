@@ -20,4 +20,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-10 8bit coin sounds by [Luke.RUSTLTD licensed CC0: https://creativecommons.org/publicdomain/zero/1.0/
+coin_sounds by Luke.RUSTLTD licensed CC0: https://creativecommons.org/publicdomain/zero/1.0/
+heal_sound by leohpaz licensed CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/

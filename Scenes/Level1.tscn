@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HealthPoint.tscn" type="PackedScene" id=4]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -35,9 +36,13 @@ position = Vector2( 55, 103 )
 [node name="Coin6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 41, 103 )
 
+[node name="Health_point" parent="." instance=ExtResource( 4 )]
+position = Vector2( 229, 116 )
+
 [connection signal="coin_collected" from="Coin" to="Player" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin2" to="Player" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin3" to="Player" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin4" to="Player" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin5" to="Player" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin6" to="Player" method="_on_Coin_coin_collected"]
+[connection signal="heart_collected" from="Health_point" to="Player" method="_on_Health_point_heart_collected"]
