@@ -24,14 +24,6 @@ region = Rect2( 0, 32, 16, 16 )
 atlas = ExtResource( 1 )
 region = Rect2( 16, 32, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 1 )
-region = Rect2( 16, 16, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 1 )
-region = Rect2( 16, 32, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 16, 16 )
@@ -52,6 +44,14 @@ region = Rect2( 0, 16, 16, 16 )
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 32, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ SubResource( 11 ) ],
@@ -64,16 +64,6 @@ animations = [ {
 "name": "Walking_left",
 "speed": 16.0
 }, {
-"frames": [ SubResource( 14 ) ],
-"loop": true,
-"name": "Idle_left",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 12 ) ],
-"loop": true,
-"name": "Jump_left",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 3 ), SubResource( 2 ) ],
 "loop": true,
 "name": "Walking_right",
@@ -82,6 +72,16 @@ animations = [ {
 "frames": [ SubResource( 13 ) ],
 "loop": true,
 "name": "Idle_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 14 ) ],
+"loop": true,
+"name": "Idle_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "Jump_left",
 "speed": 5.0
 } ]
 
@@ -102,5 +102,5 @@ animation = "Idle_left"
 position = Vector2( 0, 2 )
 shape = SubResource( 10 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="CoinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

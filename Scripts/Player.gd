@@ -13,10 +13,6 @@ var health = 5
 func _ready():
 	$AnimatedSprite.animation = "Idle_right"
 	
-func add_coin():
-	coins += 1
-	print(coins)
-	
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1
@@ -50,4 +46,6 @@ func _physics_process(delta: float) -> void:
 	# Moving player
 	velocity = move_and_slide(velocity, Vector2.UP)
 	
-	
+func _on_Coin_coin_collected():
+	coins += 1
+	$CoinSound.play()
