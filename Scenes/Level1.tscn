@@ -17,7 +17,7 @@ script = SubResource( 1 )
 position = Vector2( 152, 119 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 153, 80 )
+position = Vector2( 152, 93 )
 current = true
 script = ExtResource( 5 )
 
