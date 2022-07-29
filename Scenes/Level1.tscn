@@ -67,7 +67,7 @@ position = Vector2( 255, 69 )
 position = Vector2( 229, 116 )
 
 [node name="spikes" parent="." instance=ExtResource( 9 )]
-position = Vector2( 14, 124 )
+position = Vector2( 107, 124 )
 
 [connection signal="coin_collected" from="Coin" to="Player" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin" to="HUD" method="_on_Coin_coin_collected"]
@@ -104,3 +104,4 @@ position = Vector2( 14, 124 )
 [connection signal="coin_collected" from="Coin11" to="Music" method="_on_Coin_coin_collected"]
 [connection signal="heart_collected" from="Health_point" to="Player" method="_on_Health_point_heart_collected"]
 [connection signal="heart_collected" from="Health_point" to="Music" method="_on_Health_point_heart_collected"]
+[connection signal="body_entered" from="spikes" to="Player" method="_on_spikes_body_entered"]
