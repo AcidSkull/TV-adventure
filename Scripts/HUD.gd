@@ -1,7 +1,19 @@
 extends CanvasLayer
 
-onready var images = $VBoxContainer/LifeContainer.get_children()
+var images
+
 onready var label = $VBoxContainer/CoinContainer/Label
+
+func _ready():
+	var max_images = get_node("/root/Level1/Player").MAX_HEALTH
+	var life_container = $VBoxContainer/LifeContainer
+	
+	for _i in range(0, max_images):
+		var texture_rect = TextureRect.new()
+		texture_rect.texture = load("res://Assets/Textures/heart_point.png")
+		life_container.add_child(texture_rect)
+	
+	images = $VBoxContainer/LifeContainer.get_children()
 
 func _on_Coin_coin_collected():
 	var tmp = int(label.text) + 1
@@ -12,7 +24,6 @@ func _on_Player_take_damage():
 		if images[i].texture.resource_path != "res://Assets/Textures/blank_heart.png":
 			images[i].texture = load("res://Assets/Textures/blank_heart.png")
 			break
-
 
 func _on_Player_heal():
 	for image in images:
