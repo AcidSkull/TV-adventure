@@ -66,9 +66,23 @@ position = Vector2( 255, 69 )
 [node name="Health_point" parent="." instance=ExtResource( 4 )]
 position = Vector2( 229, 116 )
 
+[node name="Health_point2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 261, 116 )
+
+[node name="Health_point3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 245, 116 )
+
+[node name="Health_point4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 216, 116 )
+
+[node name="Health_point5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 199, 116 )
+
 [node name="spikes" parent="." instance=ExtResource( 9 )]
 position = Vector2( 107, 124 )
 
+[connection signal="heal" from="Player" to="HUD" method="_on_Player_heal"]
+[connection signal="take_damage" from="Player" to="HUD" method="_on_Player_take_damage"]
 [connection signal="coin_collected" from="Coin" to="Player" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin" to="HUD" method="_on_Coin_coin_collected"]
 [connection signal="coin_collected" from="Coin" to="Music" method="_on_Coin_coin_collected"]
@@ -104,4 +118,13 @@ position = Vector2( 107, 124 )
 [connection signal="coin_collected" from="Coin11" to="Music" method="_on_Coin_coin_collected"]
 [connection signal="heart_collected" from="Health_point" to="Player" method="_on_Health_point_heart_collected"]
 [connection signal="heart_collected" from="Health_point" to="Music" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point2" to="Player" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point2" to="Music" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point3" to="Player" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point3" to="Music" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point4" to="Player" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point4" to="Music" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point5" to="Player" method="_on_Health_point_heart_collected"]
+[connection signal="heart_collected" from="Health_point5" to="Music" method="_on_Health_point_heart_collected"]
 [connection signal="body_entered" from="spikes" to="Player" method="_on_spikes_body_entered"]
+[connection signal="body_exited" from="spikes" to="Player" method="_on_spikes_body_exited"]

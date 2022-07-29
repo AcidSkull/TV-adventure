@@ -1,18 +1,20 @@
 extends KinematicBody2D
 
-signal health_update(health)
+signal take_damage
+signal heal
 signal killed
 
-export var speed = 150.0
-export var jump_strength = 250.0
-export var gravity = 1000.0
-
+export (float) var speed = 150.0
+export (float) var jump_strength = 250.0
+export (float) var gravity = 1000.0
 var velocity = Vector2.ZERO
 var facing_right = true
 
 var coins = 0
+
 export (int) var MAX_HEALTH = 5
-onready var health = MAX_HEALTH setget _set_health
+onready var health = MAX_HEALTH
+
 onready var invulnerable_timer = $InvulnerableEffect
 
 func _ready():
@@ -55,13 +57,17 @@ func _on_Coin_coin_collected():
 	coins += 1
 
 func _on_Health_point_heart_collected():
-	_set_health(health + 1)
+	_set_health(clamp(health + 1, 0, MAX_HEALTH))
 
 func _set_health(value):
 	var prev_health = health
-	health = clamp(value, 0, MAX_HEALTH)
+	health = clamp(value, 0, MAX_HEALTH + 1)
 	if health != prev_health:
-		emit_signal("health_update", health)
+		if health > prev_health:
+			emit_signal("heal")
+		else:
+			emit_signal("take_damage")
+			
 		if health == 0:
 			kill()
 			emit_signal("killed")
@@ -69,10 +75,16 @@ func _set_health(value):
 func kill():
 	print("Dead")
 	
-func damage(amount):
+func damage():
 	if invulnerable_timer.is_stopped():
 		invulnerable_timer.start()
-		_set_health(health - amount)
+		_set_health(health - 1)
 
 func _on_spikes_body_entered(body):
-	damage(1)
+	if body.is_in_group("player"):
+		damage()
+
+
+func _on_spikes_body_exited(body):
+	if body.is_in_group("player"):
+		damage()
