@@ -3,6 +3,7 @@ extends KinematicBody2D
 signal take_damage
 signal heal
 signal killed
+signal coin_collected
 
 onready var animation = $AnimationPlayer
 onready var animationBlink = $BlinkAnimation
@@ -52,12 +53,6 @@ func _physics_process(delta: float) -> void:
 	
 	# Moving player
 	velocity = move_and_slide(velocity, Vector2.UP)
-	
-func _on_Coin_coin_collected():
-	coins += 1
-
-func _on_Health_point_heart_collected():
-	_set_health(clamp(health + 1, 0, MAX_HEALTH))
 
 func _set_health(value):
 	var prev_health = health
@@ -87,3 +82,11 @@ func _on_InvulnerableEffect_timeout():
 func _on_HurtBox_area_entered(area):
 	if area.is_in_group("hitbox"):
 		damage()
+	elif area.is_in_group("coin"):
+		coins += 1
+		emit_signal("coin_collected")
+		area.queue_free()
+	elif area.is_in_group("health"):
+		_set_health(clamp(health + 1, 0, MAX_HEALTH))
+		emit_signal("heal")
+		area.queue_free()

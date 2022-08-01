@@ -15,10 +15,6 @@ func _ready():
 	
 	images = $VBoxContainer/LifeContainer.get_children()
 
-func _on_Coin_coin_collected():
-	var tmp = int(label.text) + 1
-	label.text = str(tmp)
-
 func _on_Player_take_damage():
 	for i in range(images.size() - 1, -1 , -1):
 		if images[i].texture.resource_path != "res://Assets/Textures/blank_heart.png":
@@ -30,3 +26,7 @@ func _on_Player_heal():
 		if image.texture.resource_path != "res://Assets/Textures/heart_point.png":
 			image.texture = load("res://Assets/Textures/heart_point.png")
 			break
+
+func _on_Player_coin_collected():
+	var tmp = int(label.text) + 1
+	label.text = str(tmp)
