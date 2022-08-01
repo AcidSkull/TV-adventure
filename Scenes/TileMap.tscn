@@ -109,5 +109,6 @@ points = PoolVector2Array( 16, 16, 0.0940933, 16, 0, 0, 16, 0 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 65553, 0, 0, 327694, 2, 0, 393237, 2, 0, 393238, 2, 0 )

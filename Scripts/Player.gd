@@ -81,13 +81,9 @@ func damage():
 		invulnerable_timer.start()
 		_set_health(health - 1)
 
-func _on_spikes_body_entered(body):
-	if body.is_in_group("player"):
-		damage()
-
-func _on_spikes_body_exited(body):
-	if body.is_in_group("player"):
-		damage()
-
 func _on_InvulnerableEffect_timeout():
 	animationBlink.play("Stop")
+
+func _on_HurtBox_area_entered(area):
+	if area.is_in_group("hitbox"):
+		damage()
