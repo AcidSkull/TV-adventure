@@ -22,8 +22,8 @@ tracks/0/keys = {
 radius = 4.0
 
 [node name="Coin" type="Area2D" groups=["coin"]]
-collision_layer = 4
-collision_mask = 0
+collision_layer = 0
+collision_mask = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Spinning"
