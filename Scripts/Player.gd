@@ -7,20 +7,19 @@ signal coin_collected
 
 onready var animation = $AnimationPlayer
 onready var animationBlink = $BlinkAnimation
+onready var invulnerable_timer = $InvulnerableEffect
+
+onready var health = MAX_HEALTH
 
 export (float) var speed = 150.0
 export (float) var jump_strength = 250.0
 export (float) var gravity = 1000.0
+export (int) var MAX_HEALTH = 5
+
 var velocity = Vector2.ZERO
 var facing_right = true
-
 var coins = 0
 
-export (int) var MAX_HEALTH = 5
-onready var health = MAX_HEALTH
-
-onready var invulnerable_timer = $InvulnerableEffect
-	
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1

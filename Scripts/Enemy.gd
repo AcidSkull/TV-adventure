@@ -11,7 +11,7 @@ export var gravity = 1000.0
 
 onready var l_ray = $RayCast2D
 onready var animation = $AnimationPlayer
-onready var explosion_effect = get_node("/root/Level1/Effects/Explosion")
+onready var explosion_effect = get_parent().get_parent().get_node("Effects/Explosion")
 
 func _ready():
 	var hurtbox = get_node("HurtBox")
