@@ -1,6 +1,8 @@
 extends KinematicBody2D
 class_name Enemy
 
+signal enemy_killed(position)
+
 var velocity = Vector2.ZERO
 
 export var speed = 50
@@ -9,6 +11,7 @@ export var gravity = 1000.0
 
 onready var l_ray = $RayCast2D
 onready var animation = $AnimationPlayer
+onready var explosion_effect = get_node("/root/Level1/Effects/Explosion")
 
 func _ready():
 	var hurtbox = get_node("HurtBox")
@@ -31,3 +34,5 @@ func _physics_process(delta):
 func _on_HurtBox_body_entered(body):
 	if body.is_in_group("player"):
 		queue_free()
+		explosion_effect.start(global_position)
+		emit_signal("enemy_killed", global_position)

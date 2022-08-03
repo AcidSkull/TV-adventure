@@ -22,3 +22,4 @@ SOFTWARE.
 
 coin_sounds by Luke.RUSTLTD licensed CC0: https://creativecommons.org/publicdomain/zero/1.0/
 heal_sound by leohpaz licensed CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
+explosion by dklon licensed CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
