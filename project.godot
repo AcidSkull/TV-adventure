@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Enemy",
 "language": "GDScript",
-"path": "res://Scripts/Enemy.gd"
+"path": "res://Src/Enemies/Enemy.gd"
 } ]
 _global_script_class_icons={
 "Enemy": ""
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TV adventure"
-run/main_scene="res://Scenes/Level1.tscn"
+run/main_scene="res://Src/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [display]
