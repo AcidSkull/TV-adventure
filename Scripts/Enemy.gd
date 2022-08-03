@@ -1,13 +1,18 @@
 extends KinematicBody2D
+class_name Enemy
 
 var velocity = Vector2.ZERO
-var speed = 50
-export var moving_left = true
 
-var gravity = 1000.0
+export var speed = 50
+export var moving_left = true
+export var gravity = 1000.0
 
 onready var l_ray = $RayCast2D
 onready var animation = $AnimationPlayer
+
+func _ready():
+	var hurtbox = get_node("HurtBox")
+	hurtbox.connect("body_entered", self, "_on_HurtBox_body_entered")
 
 func _physics_process(delta):
 	if l_ray.is_colliding():
