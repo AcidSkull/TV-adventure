@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Sounds/heal_sound.wav" type="AudioStream" id=1]
-[ext_resource path="res://Src/Levels/Mechanics/Music.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Music.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sounds/coin_sound.wav" type="AudioStream" id=3]
 
 
