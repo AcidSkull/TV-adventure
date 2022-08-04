@@ -11,11 +11,11 @@ export var gravity = 1000.0
 
 onready var l_ray = $RayCast2D
 onready var animation = $AnimationPlayer
-onready var explosion_effect = get_parent().get_parent().get_node("Effects/Explosion")
 
 func _ready():
 	var hurtbox = get_node("HurtBox")
 	hurtbox.connect("body_entered", self, "_on_HurtBox_body_entered")
+	self.connect("enemy_killed", get_parent(), "_on_Enemies_enemy_killed")
 
 func _physics_process(delta):
 	if l_ray.is_colliding():
@@ -34,5 +34,4 @@ func _physics_process(delta):
 func _on_HurtBox_body_entered(body):
 	if body.is_in_group("player"):
 		queue_free()
-		explosion_effect.start(global_position)
 		emit_signal("enemy_killed", global_position)
