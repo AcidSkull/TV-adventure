@@ -15,7 +15,7 @@ onready var animation = $AnimationPlayer
 func _ready():
 	var hurtbox = get_node("HurtBox")
 	hurtbox.connect("body_entered", self, "_on_HurtBox_body_entered")
-	self.connect("enemy_killed", get_parent(), "_on_Enemies_enemy_killed")
+	var _random_var = connect("enemy_killed", get_parent(), "_on_Enemies_enemy_killed")
 
 func _physics_process(delta):
 	if l_ray.is_colliding():
