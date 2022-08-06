@@ -1,15 +1,19 @@
-extends KinematicBody2D
+extends Area2D
 
-var speed = 750
-var direction = Vector2.RIGHT
+var rove = Vector2.ZERO
+var look_vec = Vector2.ZERO
+var speed = 2
+var target = null
 
 func _ready():
-	direction = direction.normalized()
-	look_at(direction + global_position)
-	
+	look_vec = target.position - global_position
+
 func _physics_process(delta):
-	var velocity = direction * speed * delta
-	var collision = move_and_collide(velocity)
+	rove = Vector2.ZERO
 	
-	if collision and collision.collider:
-		queue_free()
+	rove = rove.move_toward(look_vec, delta)
+	rove = rove.normalized() * speed
+	position += rove
+
+func _on_Bullet_body_entered(_body):
+	queue_free()

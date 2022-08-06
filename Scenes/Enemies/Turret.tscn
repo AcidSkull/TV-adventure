@@ -72,7 +72,6 @@ anims/RESET = SubResource( 5 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 50, 0 )
 collision_mask = 2
 
 [node name="DetectionRange" type="Area2D" parent="."]
@@ -85,11 +84,8 @@ position = Vector2( 1, -32.5 )
 shape = SubResource( 6 )
 one_way_collision_margin = 0.0
 
-[node name="Position2D" type="Position2D" parent="."]
-
 [node name="CooldownTimer" type="Timer" parent="."]
-wait_time = 4.0
-one_shot = true
+autostart = true
 
 [connection signal="body_entered" from="DetectionRange" to="." method="_on_DetectionRange_body_entered"]
 [connection signal="body_exited" from="DetectionRange" to="." method="_on_DetectionRange_body_exited"]
