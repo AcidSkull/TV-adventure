@@ -54,18 +54,11 @@ func _physics_process(delta: float) -> void:
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func _set_health(value):
-	var prev_health = health
-	health = clamp(value, 0, MAX_HEALTH + 1)
-	if health != prev_health:
-		if health > prev_health:
-			emit_signal("heal")
-		else:
-			emit_signal("take_damage")
-			animationBlink.play("Blink")
-			
-		if health == 0:
-			kill()
-			emit_signal("killed")
+	health = clamp(value, 0, MAX_HEALTH)
+	print(health)
+	if health == 0:
+		kill()
+		emit_signal("killed")
 			
 func kill():
 	print("Dead")
@@ -74,6 +67,8 @@ func damage():
 	if invulnerable_timer.is_stopped():
 		invulnerable_timer.start()
 		_set_health(health - 1)
+		emit_signal("take_damage")
+		animationBlink.play("Blink")
 
 func _on_InvulnerableEffect_timeout():
 	animationBlink.play("Stop")
@@ -86,6 +81,6 @@ func _on_HurtBox_area_entered(area):
 		emit_signal("coin_collected")
 		area.queue_free()
 	elif area.is_in_group("health"):
-		_set_health(clamp(health + 1, 0, MAX_HEALTH))
+		_set_health(health + 1)
 		emit_signal("heal")
 		area.queue_free()
