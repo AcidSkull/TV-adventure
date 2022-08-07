@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Textures/heart_point.png" type="Texture" id=2]
 
@@ -7,15 +7,52 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 3.16228
 
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.25, 1.5 ),
+"transitions": PoolRealArray( 0.316518, 0.406126, 0.420448, 0.241484, 5.46416 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -1 ), Vector2( 0, -2 ), Vector2( 0, 2 ), Vector2( 0, 0 ) ]
+}
+
 [node name="HealthPoint" type="Area2D" groups=["health"]]
 collision_layer = 0
 collision_mask = 2
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1, 0 )
+position = Vector2( 0, 0.409401 )
 texture = ExtResource( 2 )
 normal_map = SubResource( 2 )
+offset = Vector2( 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 0 )
 shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/RESET = SubResource( 4 )
+anims/idle = SubResource( 3 )
