@@ -55,7 +55,6 @@ func _physics_process(delta: float) -> void:
 
 func _set_health(value):
 	health = clamp(value, 0, MAX_HEALTH)
-	print(health)
 	if health == 0:
 		kill()
 		emit_signal("killed")
