@@ -11,6 +11,7 @@ onready var animation = $AnimationPlayer
 onready var detection_range = $DetectionRange
 onready var hurtbox = $HurtBox
 onready var cooldown = $CooldownTimer
+onready var sprite = $Sprite
 
 var bullet = preload("res://Scenes/Traps/Bullet.tscn")
 var target = null
@@ -23,11 +24,13 @@ func _ready():
 		detection_range.scale.y = 1
 		hurtbox.scale.y = 1
 		ray.scale.y = -50
+		sprite.frame = 0
 	else:
 		floor_string = "ceil"
 		detection_range.scale.y = -1
 		hurtbox.scale.y = -1
 		ray.scale.y = 50
+		sprite.frame = 13
 		
 
 func fire():
