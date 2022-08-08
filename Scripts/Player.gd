@@ -8,12 +8,13 @@ signal coin_collected
 onready var animation = $AnimationPlayer
 onready var animationBlink = $BlinkAnimation
 onready var invulnerable_timer = $InvulnerableEffect
+onready var coyote_timer = $CoyoteTimer
 
 onready var health = MAX_HEALTH
 
 export (float) var speed = 150.0
-export (float) var jump_strength = 250.0
-export (float) var gravity = 1000.0
+export (float) var jump_strength = 175.0
+export (float) var gravity = 1500.0
 export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO
@@ -40,8 +41,9 @@ func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
 	
 	# Jumping
-	if Input.is_action_pressed("jump") and is_on_floor():
+	if Input.is_action_pressed("jump") and (is_on_floor() or !coyote_timer.is_stopped()):
 		velocity.y = -jump_strength
+			
 		
 	# Checking if player is in air to play animation of jumping
 	if !is_on_floor():
@@ -51,7 +53,11 @@ func _physics_process(delta: float) -> void:
 			animation.play("Jump_left")
 	
 	# Moving player
+	var was_on_floor = is_on_floor()
 	velocity = move_and_slide(velocity, Vector2.UP)
+	
+	if was_on_floor && !is_on_floor():
+		coyote_timer.start()
 
 func _set_health(value):
 	health = clamp(value, 0, MAX_HEALTH)
