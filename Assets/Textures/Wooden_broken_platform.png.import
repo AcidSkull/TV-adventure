@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/parallax_background_3.png-520ed5c05c5f9b4d55299731294ed0e8.stex"
+path="res://.import/Wooden_broken_platform.png-5f9cead244a473effb65f59e60b7c0de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Prallax/parallax_background_3.png"
-dest_files=[ "res://.import/parallax_background_3.png-520ed5c05c5f9b4d55299731294ed0e8.stex" ]
+source_file="res://Assets/Textures/Wooden_broken_platform.png"
+dest_files=[ "res://.import/Wooden_broken_platform.png-5f9cead244a473effb65f59e60b7c0de.stex" ]
 
 [params]
 

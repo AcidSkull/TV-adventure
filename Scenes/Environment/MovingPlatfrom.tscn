@@ -57,7 +57,6 @@ tracks/1/keys = {
 [node name="MovingPlatform" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 0, -18.3133 )
 collision_mask = 0
 motion/sync_to_physics = true
 
