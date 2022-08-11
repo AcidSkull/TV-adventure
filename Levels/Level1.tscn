@@ -261,6 +261,7 @@ position = Vector2( 13, 1 )
 
 [node name="CellDoor" parent="." instance=ExtResource( 19 )]
 position = Vector2( -79, 116 )
+coins_to_open = 2
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_Player_coin_collected"]
 [connection signal="coin_collected" from="Player" to="Music" method="_on_Player_coin_collected"]
