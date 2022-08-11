@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=2]
@@ -19,6 +19,11 @@
 [ext_resource path="res://Scenes/Enemies/Turret.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Collectibles/HealthPoint.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Mechanics/CellDoor.tscn" type="PackedScene" id=19]
+
+[sub_resource type="Environment" id=4]
+background_mode = 4
+glow_enabled = true
+glow_hdr_threshold = 2.5
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -58,6 +63,9 @@ tracks/0/keys = {
 }
 
 [node name="Level1" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
