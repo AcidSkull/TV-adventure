@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/Enemies/Turret.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Collectibles/HealthPoint.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Mechanics/CellDoor.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Traps/SawBlade.tscn" type="PackedScene" id=20]
 
 [sub_resource type="Environment" id=4]
 background_mode = 4
@@ -222,6 +223,9 @@ position = Vector2( 199, 116 )
 [node name="spikes" parent="Traps" instance=ExtResource( 5 )]
 position = Vector2( 107, 124 )
 
+[node name="SawBlade" parent="Traps" instance=ExtResource( 20 )]
+position = Vector2( 11, 128 )
+
 [node name="CollisionBoxes" type="Node2D" parent="."]
 
 [node name="CollisionBox" parent="CollisionBoxes" instance=ExtResource( 12 )]
@@ -263,6 +267,7 @@ position = Vector2( 221, 120 )
 position = Vector2( 240, 71 )
 
 [node name="Effects" type="Node2D" parent="."]
+position = Vector2( -5, 30 )
 
 [node name="Explosion" parent="Effects" instance=ExtResource( 15 )]
 position = Vector2( 13, 1 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/circular-saw.mp3-09a2afdae5f601494e1be3e578ffe0c2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/circular-saw.mp3"
+dest_files=[ "res://.import/circular-saw.mp3-09a2afdae5f601494e1be3e578ffe0c2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
