@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Enemies/Enemies.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Traps/spikes.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Traps/Spikes.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Enemies/Dron.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Collectibles/Coin.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Environment/Environment.tscn" type="PackedScene" id=8]
@@ -221,7 +221,7 @@ position = Vector2( 199, 116 )
 [node name="Traps" type="Node2D" parent="."]
 
 [node name="spikes" parent="Traps" instance=ExtResource( 5 )]
-position = Vector2( 107, 124 )
+position = Vector2( 107, 127 )
 
 [node name="SawBlade" parent="Traps" instance=ExtResource( 20 )]
 position = Vector2( 11, 128 )
