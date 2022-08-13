@@ -21,6 +21,18 @@ var velocity = Vector2.ZERO
 var facing_right = true
 var coins = 0
 
+func _ready():
+	var HUD = get_parent().get_node("HUD")
+	var music = get_parent().get_node("Music")
+	var _unused
+	
+	_unused = connect("coin_collected", HUD, "_on_Player_coin_collected")
+	_unused = connect("heal", HUD, "_on_Player_heal")
+	_unused = connect("take_damage", HUD, "_on_Player_take_damage")
+	
+	_unused = connect("coin_collected", music, "_on_Player_coin_collected")
+	_unused = connect("heal", music, "_on_Player_heal")
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1
