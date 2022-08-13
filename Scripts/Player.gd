@@ -24,6 +24,7 @@ var coins = 0
 func _ready():
 	var HUD = get_parent().get_node("HUD")
 	var music = get_parent().get_node("Music")
+	var camera = get_parent().get_node("Camera2D")
 	var _unused
 	
 	_unused = connect("coin_collected", HUD, "_on_Player_coin_collected")
@@ -32,6 +33,8 @@ func _ready():
 	
 	_unused = connect("coin_collected", music, "_on_Player_coin_collected")
 	_unused = connect("heal", music, "_on_Player_heal")
+	
+	_unused = connect("take_damage", camera, "add_shake_strength")
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):
