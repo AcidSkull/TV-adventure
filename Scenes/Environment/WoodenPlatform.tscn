@@ -76,6 +76,5 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 4, 0, 4 )
 [node name="WoodenPlatform" type="TileMap"]
 tile_set = SubResource( 5 )
 cell_size = Vector2( 16, 4 )
-show_collision = true
 collision_mask = 0
 format = 1
