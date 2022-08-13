@@ -1,0 +1,169 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Environment/Environment.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Environment/MovingPlatfrom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Environment/WoodenPlatform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Mechanics/Camera2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Mechanics/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Mechanics/Music.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Mechanics/WorldEnvironment.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Traps/Spikes.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Traps/SawBlade.tscn" type="PackedScene" id=10]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 3.05176e-05, 0, 0, 0, 0, 0, 94, 0 )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -81, 0 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Fly"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.99 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[node name="Level1" type="Node"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 59.0, 64.0 ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 8 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 294, 45 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 154.327, 168.583 )
+
+[node name="WoodenPlatform" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2.32718, 87.5834 )
+tile_data = PoolIntArray( -458732, 0, 3, -458717, 0, 3 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+position = Vector2( 468, 68 )
+tile_data = PoolIntArray( -12, 6, 0, -11, 6, 2, -65528, 6, 0, -65527, 6, 2, 65519, 6, 0, 65520, 6, 2, 65524, 6, 65541, 65525, 6, 65538, 8, 6, 65541, 9, 6, 65538, 131051, 6, 0, 131052, 6, 2, 131055, 6, 65541, 131056, 6, 65538, 131060, 6, 65541, 131061, 6, 65539, 65544, 6, 65536, 65545, 6, 65539, 65553, 0, 0, 196579, 6, 0, 196580, 6, 131076, 196581, 6, 131076, 196582, 6, 131076, 196583, 6, 1, 196584, 6, 1, 196585, 6, 1, 196586, 6, 131076, 196587, 6, 131077, 196588, 6, 131075, 196589, 6, 131076, 196590, 6, 131076, 196591, 6, 131077, 196592, 6, 131075, 196593, 6, 1, 196594, 6, 1, 196595, 6, 1, 196596, 6, 131077, 196597, 6, 65539, 131080, 6, 65536, 131081, 6, 131075, 131082, 6, 1, 131083, 6, 2, 262115, 6, 65541, 262116, 6, 65537, 262117, 6, 65537, 262118, 6, 65537, 262119, 6, 65537, 262120, 6, 65537, 262121, 6, 65537, 262122, 6, 65537, 262123, 6, 65537, 262124, 6, 65537, 262125, 6, 65537, 262126, 6, 65537, 262127, 6, 65537, 262128, 6, 65537, 262129, 6, 65537, 262130, 6, 65537, 262131, 6, 65537, 262132, 6, 65537, 262133, 6, 131075, 262134, 6, 131076, 262135, 6, 131076, 262136, 6, 1, 262137, 6, 131076, 262138, 6, 131076, 262139, 6, 131076, 262140, 6, 1, 262141, 6, 131076, 262142, 6, 131076, 262143, 6, 131076, 196608, 6, 1, 196609, 6, 1, 196610, 6, 1, 196611, 6, 1, 196612, 6, 1, 196613, 6, 131076, 196614, 6, 1, 196615, 6, 131076, 196616, 6, 131077, 196617, 6, 65537, 196618, 6, 65537, 196619, 6, 65539, 327651, 6, 65536, 327652, 6, 65537, 327653, 6, 65537, 327654, 6, 65537, 327655, 6, 65537, 327656, 6, 65537, 327657, 6, 65537, 327658, 6, 65537, 327659, 6, 65537, 327660, 6, 65537, 327661, 6, 65537, 327662, 6, 65537, 327663, 6, 65537, 327664, 6, 65537, 327665, 6, 65537, 327666, 6, 65537, 327667, 6, 65537, 327668, 6, 65537, 327669, 6, 65537, 327670, 6, 65537, 327671, 6, 65537, 327672, 6, 65537, 327673, 6, 65537, 327674, 6, 65537, 327675, 6, 65537, 327676, 6, 65537, 327677, 6, 65537, 327678, 6, 65537, 327679, 6, 65537, 262144, 6, 65537, 262145, 6, 65537, 262146, 6, 65537, 262147, 6, 65537, 262148, 6, 65537, 262149, 6, 65537, 262150, 6, 65537, 262151, 6, 65537, 262152, 6, 65537, 262153, 6, 65537, 262154, 6, 65537, 262155, 6, 65538, 393187, 6, 65536, 393188, 6, 65537, 393189, 6, 65537, 393190, 6, 65537, 393191, 6, 65537, 393192, 6, 65537, 393193, 6, 65537, 393194, 6, 65537, 393195, 6, 65537, 393196, 6, 65537, 393197, 6, 65537, 393198, 6, 65537, 393199, 6, 65537, 393200, 6, 65537, 393201, 6, 65537, 393202, 6, 65537, 393203, 6, 65537, 393204, 6, 65537, 393205, 6, 65537, 393206, 6, 65537, 393207, 6, 65537, 393208, 6, 65537, 393209, 6, 65537, 393210, 6, 65537, 393211, 6, 65537, 393212, 6, 65537, 393213, 6, 65537, 393214, 6, 65537, 393215, 6, 65537, 327680, 6, 65537, 327681, 6, 65537, 327682, 6, 65537, 327683, 6, 65537, 327684, 6, 65537, 327685, 6, 65537, 327686, 6, 65537, 327687, 6, 65537, 327688, 6, 65537, 327689, 6, 65537, 327690, 6, 65537, 327691, 6, 65539, 458723, 6, 131072, 458724, 6, 4, 458725, 6, 4, 458726, 6, 131073, 458727, 6, 4, 458728, 6, 4, 458729, 6, 131073, 458730, 6, 4, 458731, 6, 4, 458732, 6, 131073, 458733, 6, 4, 458734, 6, 131073, 458735, 6, 4, 458736, 6, 131073, 458737, 6, 131073, 458738, 6, 4, 458739, 6, 131073, 458740, 6, 131073, 458741, 6, 131073, 458742, 6, 4, 458743, 6, 4, 458744, 6, 4, 458745, 6, 4, 458746, 6, 131073, 458747, 6, 131073, 458748, 6, 4, 458749, 6, 4, 458750, 6, 4, 458751, 6, 4, 393216, 6, 4, 393217, 6, 4, 393218, 6, 131073, 393219, 6, 131073, 393220, 6, 4, 393221, 6, 131073, 393222, 6, 131073, 393223, 6, 131073, 393224, 6, 4, 393225, 6, 131073, 393226, 6, 131073, 393227, 6, 131074, 393237, 2, 0, 393238, 2, 0 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Music" parent="." instance=ExtResource( 7 )]
+
+[node name="MovingPlatforms" type="Node2D" parent="."]
+
+[node name="MovingPlatform" parent="MovingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( 351, 62 )
+curve = SubResource( 1 )
+
+[node name="KinematicBody2D" parent="MovingPlatforms/MovingPlatform" index="0"]
+position = Vector2( 3.05176e-05, 0 )
+
+[node name="PathFollow2D" parent="MovingPlatforms/MovingPlatform" index="1"]
+position = Vector2( 3.05176e-05, 0 )
+
+[node name="MovingPlatform2" parent="MovingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( 549, 62 )
+curve = SubResource( 2 )
+
+[node name="KinematicBody2D" parent="MovingPlatforms/MovingPlatform2" index="0"]
+position = Vector2( 0, 0 )
+
+[node name="AnimationPlayer" parent="MovingPlatforms/MovingPlatform2/PathFollow2D" index="1"]
+anims/Fly = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="Traps" type="Node2D" parent="."]
+position = Vector2( -1, 2 )
+
+[node name="Spikes" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 167, 97 )
+
+[node name="Spikes2" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 174, 97 )
+
+[node name="Spikes3" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 181, 97 )
+
+[node name="Spikes4" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 188, 97 )
+
+[node name="Spikes5" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 195, 97 )
+
+[node name="Spikes6" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 232, 97 )
+
+[node name="Spikes7" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 239, 97 )
+
+[node name="Spikes8" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 246, 97 )
+
+[node name="Spikes9" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 253, 97 )
+
+[node name="Spikes10" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 260, 97 )
+
+[node name="Spikes11" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 267, 97 )
+
+[node name="Spikes12" parent="Traps" instance=ExtResource( 9 )]
+position = Vector2( 274, 97 )
+
+[node name="SawBlade" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 326, 115 )
+
+[node name="SawBlade2" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 360, 115 )
+
+[node name="SawBlade3" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 395, 115 )
+
+[node name="SawBlade4" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 430, 115 )
+
+[node name="SawBlade5" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 466, 115 )
+
+[node name="SawBlade6" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 503, 115 )
+
+[node name="SawBlade7" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 541, 115 )
+
+[node name="SawBlade8" parent="Traps" instance=ExtResource( 10 )]
+position = Vector2( 577, 115 )
+
+[editable path="MovingPlatforms/MovingPlatform"]
+[editable path="MovingPlatforms/MovingPlatform2"]

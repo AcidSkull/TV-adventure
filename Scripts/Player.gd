@@ -14,7 +14,7 @@ onready var health = MAX_HEALTH
 
 export (float) var speed = 150.0
 export (float) var jump_strength = 175.0
-export (float) var gravity = 1500.0
+export (float) var gravity = 1400.0
 export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO

@@ -5,7 +5,7 @@ var images
 onready var label = $VBoxContainer/CoinContainer/Label
 
 func _ready():
-	var max_images = get_node("/root/Level1/Player").MAX_HEALTH
+	var max_images = get_parent().get_node("Player").MAX_HEALTH
 	var life_container = $VBoxContainer/LifeContainer
 	
 	for _i in range(0, max_images):
