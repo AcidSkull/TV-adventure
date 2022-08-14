@@ -37,6 +37,8 @@ func _ready():
 	_unused = connect("take_damage", camera, "add_shake_strength")
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("reset"):
+		get_tree().reload_current_scene()
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1
 		facing_right = true

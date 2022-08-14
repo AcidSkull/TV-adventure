@@ -5,7 +5,7 @@ signal enemy_killed(position)
 
 var velocity = Vector2.ZERO
 
-export var speed = 50
+export var speed = 45
 export var moving_left = true
 export var gravity = 1000.0
 
