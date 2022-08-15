@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Environment/Environment.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Scenes/Environment/WoodenBrokenPlatform.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/Environment/Boxes.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Environment/Bush.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Environment/TrashBag.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -67,7 +68,7 @@ tracks/0/keys = {
 
 [sub_resource type="Curve2D" id=5]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -1, -128 )
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, -1, -128 )
 }
 
 [sub_resource type="Curve2D" id=6]
@@ -141,6 +142,10 @@ tile_data = PoolIntArray( 52, 0, 0, 65587, 0, 0, 65588, 0, 0, 131123, 0, 0, 1311
 [node name="Boxes2" parent="." instance=ExtResource( 21 )]
 modulate = Color( 0.698039, 0.529412, 0.529412, 1 )
 tile_data = PoolIntArray( 65588, 0, 0, 131123, 0, 0, 131124, 0, 0, 262176, 0, 0, 262186, 0, 0, 262187, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327711, 0, 0, 327712, 0, 0, 327720, 0, 0, 327721, 0, 0, 327722, 0, 0, 327723, 0, 0, 327724, 0, 0, 458754, 0, 0, 458765, 0, 0, 458766, 0, 0, 524289, 0, 0, 524290, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 655392, 0, 0, 655393, 0, 0, 655394, 0, 0, 655407, 0, 0, 720912, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 720929, 0, 0, 720930, 0, 0, 720943, 0, 0, 720944, 0, 0, 720945, 0, 0, 720946, 0, 0, 786448, 0, 0, 786454, 0, 0, 917548, 0, 0, 917549, 0, 0, 1507392, 0, 0, 1507393, 0, 0, 1507394, 0, 0, 1572926, 0, 0, 1572927, 0, 0, 1572928, 0, 0, 1572929, 0, 0, 1572930, 0, 0, 1638461, 0, 0, 1638462, 0, 0, 1638463, 0, 0, 1638464, 0, 0, 1638465, 0, 0, 1638466, 0, 0, 1638467, 0, 0, 1638468, 0, 0, 1703984, 0, 0, 1703985, 0, 0, 1769518, 0, 0, 1769519, 0, 0, 1769520, 0, 0, 1769521, 0, 0, 1769522, 0, 0 )
+
+[node name="TrashBag" parent="." instance=ExtResource( 23 )]
+modulate = Color( 0.368627, 0.356863, 0.356863, 1 )
+tile_data = PoolIntArray( 131123, 0, 0, 327723, 1, 0, 327726, 2, 0, 589825, 0, 0, 589834, 2, 0, 589838, 0, 0, 720945, 2, 0, 786453, 0, 0, 1638409, 2, 0, 1638440, 2, 0, 1638457, 2, 0, 1638458, 0, 0, 1638464, 0, 0, 1638465, 2, 0, 1638467, 1, 0, 1638469, 0, 0, 1638472, 0, 0, 1638476, 2, 0, 1638480, 0, 0, 1703938, 2, 0, 1703939, 2, 0, 1703940, 0, 0, 1703941, 2, 0, 1703942, 2, 0, 1703943, 2, 0, 1703944, 2, 0, 1703950, 2, 0, 1703951, 0, 0, 1703990, 0, 0, 1769497, 2, 0, 1769506, 0, 0, 1769509, 0, 0, 1769523, 0, 0 )
 
 [node name="Environment" parent="." instance=ExtResource( 2 )]
 position = Vector2( 468, 394 )
@@ -348,10 +353,10 @@ position = Vector2( 923, 58 )
 curve = SubResource( 5 )
 
 [node name="KinematicBody2D" parent="MovingPlatforms/MovingPlatform3" index="0"]
-position = Vector2( 0, -1 )
+position = Vector2( 0, 17 )
 
 [node name="PathFollow2D" parent="MovingPlatforms/MovingPlatform3" index="1"]
-position = Vector2( 0, -1 )
+position = Vector2( 0, 17 )
 
 [node name="AnimationPlayer" parent="MovingPlatforms/MovingPlatform3/PathFollow2D" index="1"]
 playback_speed = 0.25
