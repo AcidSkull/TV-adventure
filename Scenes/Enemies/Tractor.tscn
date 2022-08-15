@@ -47,6 +47,7 @@ extents = Vector2( 10, 6 )
 extents = Vector2( 5.5, 0.5 )
 
 [node name="Tractor" type="KinematicBody2D"]
+z_index = 1
 collision_layer = 5
 script = ExtResource( 2 )
 
