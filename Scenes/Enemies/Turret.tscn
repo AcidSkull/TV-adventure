@@ -98,6 +98,7 @@ position = Vector2( 0, -5 )
 shape = SubResource( 7 )
 
 [node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
 
 [connection signal="body_entered" from="DetectionRange" to="." method="_on_DetectionRange_body_entered"]
