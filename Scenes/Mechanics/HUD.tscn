@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Textures/coin_icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Textures/HUD/coin_icon.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/Hack-Bold.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]

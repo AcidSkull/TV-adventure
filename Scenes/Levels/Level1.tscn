@@ -23,10 +23,10 @@
 [ext_resource path="res://Scenes/Environment/Boxes.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Environment/Bush.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Scenes/Environment/TrashBag.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Assets/Textures/Big_tree.png" type="Texture" id=24]
-[ext_resource path="res://Assets/Textures/Sky.png" type="Texture" id=25]
-[ext_resource path="res://Assets/Textures/Further_treespng.png" type="Texture" id=26]
-[ext_resource path="res://Assets/Textures/Even_further_trees.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Textures/Parallax/Big_tree.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Textures/Parallax/Sky.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Textures/Parallax/Further_treespng.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Textures/Parallax/Even_further_trees.png" type="Texture" id=27]
 
 [sub_resource type="Curve2D" id=2]
 _data = {
@@ -1570,7 +1570,7 @@ editor_draw_limits = true
 motion_mirroring = Vector2( 500, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky"]
-position = Vector2( 559, 335 )
+position = Vector2( 576, 335 )
 scale = Vector2( 2.307, 1 )
 texture = ExtResource( 25 )
 
@@ -1580,7 +1580,7 @@ motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 500, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/EvenFurtherTrees"]
-position = Vector2( 252, 222 )
+position = Vector2( 252, 483 )
 texture = ExtResource( 27 )
 
 [node name="FurtherTrees" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -1589,7 +1589,7 @@ motion_scale = Vector2( 0.7, 1 )
 motion_mirroring = Vector2( 500, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/FurtherTrees"]
-position = Vector2( 223, 494 )
+position = Vector2( 250, 494 )
 texture = ExtResource( 26 )
 
 [node name="BigTrees" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -1598,7 +1598,7 @@ motion_scale = Vector2( 0.8, 1 )
 motion_mirroring = Vector2( 500, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/BigTrees"]
-position = Vector2( 226, 357 )
+position = Vector2( 248, 357 )
 texture = ExtResource( 24 )
 
 [node name="Bush" parent="." instance=ExtResource( 22 )]

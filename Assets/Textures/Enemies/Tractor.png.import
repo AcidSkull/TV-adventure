@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Box.png-aae63dc469cc8b37a6c66ba8a5a203c7.stex"
+path="res://.import/Tractor.png-912389b10251abb008cce407869a1b80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Box.png"
-dest_files=[ "res://.import/Box.png-aae63dc469cc8b37a6c66ba8a5a203c7.stex" ]
+source_file="res://Assets/Textures/Enemies/Tractor.png"
+dest_files=[ "res://.import/Tractor.png-912389b10251abb008cce407869a1b80.stex" ]
 
 [params]
 

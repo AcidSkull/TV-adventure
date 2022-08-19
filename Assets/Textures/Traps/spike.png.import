@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart_point.png-cc5306c34b012435da4c4581504cc5cb.stex"
+path="res://.import/spike.png-53ccfeb2aef1ea495101a62eaf216e82.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/heart_point.png"
-dest_files=[ "res://.import/heart_point.png-cc5306c34b012435da4c4581504cc5cb.stex" ]
+source_file="res://Assets/Textures/Traps/spike.png"
+dest_files=[ "res://.import/spike.png-53ccfeb2aef1ea495101a62eaf216e82.stex" ]
 
 [params]
 

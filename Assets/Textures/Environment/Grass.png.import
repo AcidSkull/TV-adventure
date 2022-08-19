@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bullet.png-83fbd6c54d3aa98498b931b6454d808e.stex"
+path="res://.import/Grass.png-c4da3dd46c8cc721221e50197b85eb17.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Bullet.png"
-dest_files=[ "res://.import/Bullet.png-83fbd6c54d3aa98498b931b6454d808e.stex" ]
+source_file="res://Assets/Textures/Environment/Grass.png"
+dest_files=[ "res://.import/Grass.png-c4da3dd46c8cc721221e50197b85eb17.stex" ]
 
 [params]
 

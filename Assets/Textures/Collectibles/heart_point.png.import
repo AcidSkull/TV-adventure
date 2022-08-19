@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/coin.png-0ac6506864075840a162894edac72bfa.stex"
+path="res://.import/heart_point.png-52bcf0b176a695053f49b53fb4ada646.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/coin.png"
-dest_files=[ "res://.import/coin.png-0ac6506864075840a162894edac72bfa.stex" ]
+source_file="res://Assets/Textures/Collectibles/heart_point.png"
+dest_files=[ "res://.import/heart_point.png-52bcf0b176a695053f49b53fb4ada646.stex" ]
 
 [params]
 

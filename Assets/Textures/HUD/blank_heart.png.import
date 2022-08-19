@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TrashBags.png-a002df682da913113776c39ddc5eee80.stex"
+path="res://.import/blank_heart.png-3beb6c5a9ae80335832dccfb27d1d081.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/TrashBags.png"
-dest_files=[ "res://.import/TrashBags.png-a002df682da913113776c39ddc5eee80.stex" ]
+source_file="res://Assets/Textures/HUD/blank_heart.png"
+dest_files=[ "res://.import/blank_heart.png-3beb6c5a9ae80335832dccfb27d1d081.stex" ]
 
 [params]
 

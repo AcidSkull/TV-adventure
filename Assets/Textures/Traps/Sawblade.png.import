@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/coin_icon.png-3b7f0723a94e74312a82ce33bda07afb.stex"
+path="res://.import/Sawblade.png-cea77a12d1457daf6a9f762049517e44.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/coin_icon.png"
-dest_files=[ "res://.import/coin_icon.png-3b7f0723a94e74312a82ce33bda07afb.stex" ]
+source_file="res://Assets/Textures/Traps/Sawblade.png"
+dest_files=[ "res://.import/Sawblade.png-cea77a12d1457daf6a9f762049517e44.stex" ]
 
 [params]
 

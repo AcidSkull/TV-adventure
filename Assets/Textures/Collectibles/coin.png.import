@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wooden_platform.png-b151aef966b1f8293e70ed8c09264bba.stex"
+path="res://.import/coin.png-a15922e39abe17168592c115ca2ae167.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Wooden_platform.png"
-dest_files=[ "res://.import/Wooden_platform.png-b151aef966b1f8293e70ed8c09264bba.stex" ]
+source_file="res://Assets/Textures/Collectibles/coin.png"
+dest_files=[ "res://.import/coin.png-a15922e39abe17168592c115ca2ae167.stex" ]
 
 [params]
 

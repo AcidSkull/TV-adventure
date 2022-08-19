@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Assets/Textures/Cell_door.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/Environment/Cell_door.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Fonts/Hack-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/CellDoor.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Sounds/door_open.wav" type="AudioStream" id=4]

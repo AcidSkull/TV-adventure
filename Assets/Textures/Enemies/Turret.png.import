@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Even_further_trees.png-38a5a4d9155f364149e78d1bb641d607.stex"
+path="res://.import/Turret.png-841c9a24db9be56eb1144820769fef24.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Even_further_trees.png"
-dest_files=[ "res://.import/Even_further_trees.png-38a5a4d9155f364149e78d1bb641d607.stex" ]
+source_file="res://Assets/Textures/Enemies/Turret.png"
+dest_files=[ "res://.import/Turret.png-841c9a24db9be56eb1144820769fef24.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

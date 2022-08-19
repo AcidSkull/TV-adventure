@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cell_door.png-b09e8528c76aa6e5a7d59992e83b58d0.stex"
+path="res://.import/coin_icon.png-80b4af2e2d12a09deeb534de27356ddb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Cell_door.png"
-dest_files=[ "res://.import/Cell_door.png-b09e8528c76aa6e5a7d59992e83b58d0.stex" ]
+source_file="res://Assets/Textures/HUD/coin_icon.png"
+dest_files=[ "res://.import/coin_icon.png-80b4af2e2d12a09deeb534de27356ddb.stex" ]
 
 [params]
 
