@@ -19,7 +19,7 @@ export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO
 var facing_right = true
-var coins = 0
+var coins = 34245
 
 func _ready():
 	var HUD = get_parent().get_node("HUD")
@@ -37,8 +37,6 @@ func _ready():
 	_unused = connect("take_damage", camera, "add_shake_strength")
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("reset"):
-		get_tree().reload_current_scene()
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1
 		facing_right = true
