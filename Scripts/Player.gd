@@ -14,12 +14,12 @@ onready var health = MAX_HEALTH
 
 export (float) var speed = 150.0
 export (float) var jump_strength = 175.0
-export (float) var gravity = 1400.0
+export (float) var gravity = 1800.0
 export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO
 var facing_right = true
-var coins = 34245
+var coins = 0
 
 func _ready():
 	var HUD = get_parent().get_node("HUD")
