@@ -19,7 +19,7 @@ export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO
 var facing_right = true
-var coins = 0
+var coins = 324432
 
 func _ready():
 	var HUD = get_parent().get_node("HUD")
