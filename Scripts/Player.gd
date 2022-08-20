@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
-signal take_damage
-signal heal
 signal killed
 signal coin_collected
+signal heal
+signal take_damage
+signal change_health(health, heal_or_damage)
 
 onready var animation = $AnimationPlayer
 onready var animationBlink = $BlinkAnimation
@@ -20,16 +21,18 @@ export (int) var MAX_HEALTH = 5
 var velocity = Vector2.ZERO
 var facing_right = true
 var coins = 324432
+var checkpoint
 
 func _ready():
+	checkpoint = global_position
+	
 	var HUD = get_parent().get_node("HUD")
 	var music = get_parent().get_node("Music")
 	var camera = get_parent().get_node("Camera2D")
 	var _unused
 	
 	_unused = connect("coin_collected", HUD, "_on_Player_coin_collected")
-	_unused = connect("heal", HUD, "_on_Player_heal")
-	_unused = connect("take_damage", HUD, "_on_Player_take_damage")
+	_unused = connect("change_health", HUD, "_on_change_health")
 	
 	_unused = connect("coin_collected", music, "_on_Player_coin_collected")
 	_unused = connect("heal", music, "_on_Player_heal")
@@ -75,13 +78,22 @@ func _physics_process(delta: float) -> void:
 		coyote_timer.start()
 
 func _set_health(value):
+	var heal_or_damage
+	
+	if value < health:
+		heal_or_damage = false
+	else:
+		heal_or_damage = true
+	
 	health = clamp(value, 0, MAX_HEALTH)
+	emit_signal("change_health", health, heal_or_damage)
 	if health == 0:
 		kill()
 		emit_signal("killed")
 			
 func kill():
-	print("Dead")
+	_set_health(MAX_HEALTH)
+	position = checkpoint
 	
 func damage():
 	if invulnerable_timer.is_stopped():
@@ -104,3 +116,6 @@ func _on_HurtBox_area_entered(area):
 		_set_health(health + 1)
 		emit_signal("heal")
 		area.queue_free()
+
+func setCheckpoint(FlagPosition):
+	checkpoint = FlagPosition

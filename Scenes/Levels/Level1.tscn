@@ -1,4 +1,4 @@
-[gd_scene load_steps=145 format=2]
+[gd_scene load_steps=146 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Environment/Environment.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Assets/Textures/Parallax/Sky.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Textures/Parallax/Further_treespng.png" type="Texture" id=26]
 [ext_resource path="res://Assets/Textures/Parallax/Even_further_trees.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Mechanics/Checkpoint.tscn" type="PackedScene" id=28]
 
 [sub_resource type="Curve2D" id=2]
 _data = {
@@ -4865,7 +4866,7 @@ position = Vector2( 2262, 813 )
 is_on_floor = false
 
 [node name="Turret10" parent="Enemies" instance=ExtResource( 19 )]
-position = Vector2( 2653, 791 )
+position = Vector2( 2653, 792 )
 
 [node name="Turret24" parent="Enemies" instance=ExtResource( 19 )]
 position = Vector2( 2548, 698 )
@@ -5379,6 +5380,9 @@ coins_to_open = 537
 [node name="CellDoor6" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3635, 780 )
 coins_to_open = 403
+
+[node name="Checkpoint" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1508, 679 )
 
 [editable path="MovingPlatforms/MovingPlatform2"]
 [editable path="MovingPlatforms/MovingPlatform3"]
