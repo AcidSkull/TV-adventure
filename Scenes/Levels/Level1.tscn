@@ -1599,8 +1599,9 @@ texture = ExtResource( 26 )
 
 [node name="BigTrees" type="ParallaxLayer" parent="ParallaxBackground"]
 modulate = Color( 0.411765, 0.501961, 0.447059, 1 )
+position = Vector2( 6, 0 )
 motion_scale = Vector2( 0.8, 1 )
-motion_mirroring = Vector2( 500, 0 )
+motion_mirroring = Vector2( 512, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/BigTrees"]
 position = Vector2( 249, 1242 )
