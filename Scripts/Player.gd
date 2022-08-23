@@ -107,6 +107,8 @@ func _on_InvulnerableEffect_timeout():
 
 func _on_HurtBox_area_entered(area):
 	if area.is_in_group("hitbox"):
+		if area.is_in_group("sawblade"):
+			position = area.position_to_return
 		damage()
 	elif area.is_in_group("coin"):
 		coins += 1
