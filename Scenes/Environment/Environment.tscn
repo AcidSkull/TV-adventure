@@ -1,9 +1,10 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Assets/Textures/Environment/Dirt.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Textures/Environment/Grass.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Textures/Environment/Grass_dirt_union.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Textures/Environment/Bricks.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Textures/Environment/Grass_background.png" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -588,6 +589,27 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 14, 0, 14 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
+4/name = "Grass_background.png 4"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 96, 160 )
+4/tile_mode = 2
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 32, 32 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
 
 [node name="Environment" type="TileMap"]
 scale = Vector2( 0.5, 0.5 )

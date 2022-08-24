@@ -20,7 +20,7 @@ export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO
 var facing_right = true
-var coins = 0
+var coins = 2343564
 var checkpoint
 
 func _ready():
@@ -108,7 +108,9 @@ func _on_InvulnerableEffect_timeout():
 func _on_HurtBox_area_entered(area):
 	if area.is_in_group("hitbox"):
 		if area.is_in_group("sawblade"):
-			position = area.position_to_return
+			var pos = area.position_to_return
+			if pos.x != 0 and pos.y != 0:
+				position = area.position_to_return
 		damage()
 	elif area.is_in_group("coin"):
 		coins += 1
