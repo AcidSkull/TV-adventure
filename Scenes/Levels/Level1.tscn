@@ -5440,7 +5440,8 @@ position = Vector2( 3064, 2167 )
 position = Vector2( 4186, 679 )
 
 [node name="Truck" type="Sprite" parent="."]
-position = Vector2( 5724, 730 )
+position = Vector2( 5696, 762 )
+scale = Vector2( 0.75, 0.55 )
 z_index = 1
 texture = ExtResource( 30 )
 

@@ -20,7 +20,7 @@ export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO
 var facing_right = true
-var coins = 2343564
+var coins = 0
 var checkpoint
 
 func _ready():
