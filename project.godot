@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TV adventure"
-run/main_scene="res://Scenes/Levels/Level1.tscn"
+run/main_scene="res://Scenes/Levels/Level2.tscn"
 config/icon="res://icon.png"
 
 [display]
