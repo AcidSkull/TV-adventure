@@ -19,8 +19,7 @@
 motion_mirroring = Vector2( 256, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Road"]
-position = Vector2( 264, 686 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 260, 676 )
 texture = ExtResource( 8 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 7 )]
