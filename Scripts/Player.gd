@@ -72,7 +72,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Moving player
 	var was_on_floor = is_on_floor()
-	velocity = move_and_slide(velocity, Vector2.UP)
+	velocity = move_and_slide(velocity, Vector2.UP, false, 4, PI/4, false)
 	
 	if was_on_floor && !is_on_floor():
 		coyote_timer.start()

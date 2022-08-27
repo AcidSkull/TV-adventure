@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Car_1.png-69ab6e5141c905492a080ec4385d2b96.stex"
+path="res://.import/Car.png-9ca1b53bd0fcf8e5203c46fe57161cb7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Traps/Car_1.png"
-dest_files=[ "res://.import/Car_1.png-69ab6e5141c905492a080ec4385d2b96.stex" ]
+source_file="res://Assets/Textures/Traps/Car.png"
+dest_files=[ "res://.import/Car.png-9ca1b53bd0fcf8e5203c46fe57161cb7.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
