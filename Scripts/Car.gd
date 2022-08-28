@@ -1,6 +1,6 @@
-extends StaticBody2D
+extends RigidBody2D
 
-export (int) var speed = 45
+export (int) var speed = 85
 
 func _physics_process(delta):
-	self.translate(Vector2(-speed * delta, 0))
+	translate(Vector2(-speed * delta, 0))
