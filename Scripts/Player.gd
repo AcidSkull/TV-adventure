@@ -109,8 +109,9 @@ func _on_HurtBox_area_entered(area):
 	print(area)
 	if area.is_in_group("hitbox"):
 		if area.is_in_group("trap"):
-			_return_when_hit_trap(area.position_to_return)
-		damage()
+			return_when_hit_trap(area.position_to_return)
+		else:
+			damage()
 	elif area.is_in_group("coin"):
 		coins += 1
 		emit_signal("coin_collected")
@@ -124,9 +125,10 @@ func setCheckpoint(FlagPosition):
 	checkpoint = FlagPosition
 
 func on_car_hit(pos):
-	_return_when_hit_trap(pos)
-	damage()
+	return_when_hit_trap(pos)
 
-func _return_when_hit_trap(pos):
+func return_when_hit_trap(pos):
 	if pos.x != 0 and pos.y != 0:
 		position = pos
+	_set_health(health - 1)
+	emit_signal("take_damage")
