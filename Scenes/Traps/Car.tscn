@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/Textures/Traps/Car.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Textures/Traps/Cars.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Textures/Traps/Wheel.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Car.gd" type="Script" id=3]
 
@@ -84,6 +84,7 @@ script = ExtResource( 3 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1 )
 texture = ExtResource( 1 )
+hframes = 5
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 visible = false

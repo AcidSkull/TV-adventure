@@ -4,6 +4,14 @@ export (int) var speed = 85
 
 signal player_hit
 
+func _ready():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	
+	var random_number = rng.randi_range(0, 4)
+	
+	$Sprite.frame = random_number
+
 func _physics_process(delta):
 	translate(Vector2(-speed * delta, 0))
 
