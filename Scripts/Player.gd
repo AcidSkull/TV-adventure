@@ -106,8 +106,9 @@ func _on_InvulnerableEffect_timeout():
 	animationBlink.play("Stop")
 
 func _on_HurtBox_area_entered(area):
+	print(area)
 	if area.is_in_group("hitbox"):
-		if area.is_in_group("sawblade"):
+		if area.is_in_group("trap"):
 			var pos = area.position_to_return
 			if pos.x != 0 and pos.y != 0:
 				position = area.position_to_return
