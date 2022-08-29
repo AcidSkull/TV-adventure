@@ -23,3 +23,7 @@ func _physics_process(delta):
 func _on_Hitbox_body_entered(body):
 	if body.is_in_group("player"):
 		emit_signal("player_hit", position_to_return)
+
+func _on_Hitbox_area_entered(area):
+	if area.is_in_group("despawn"):
+		queue_free()

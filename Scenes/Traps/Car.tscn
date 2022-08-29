@@ -114,4 +114,5 @@ visible = false
 position = Vector2( -46, 4 )
 shape = SubResource( 3 )
 
+[connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
