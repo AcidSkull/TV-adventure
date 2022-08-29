@@ -1,7 +1,8 @@
 extends RigidBody2D
 
 export (int) var speed = 85
-export (Vector2) var position_to_return = Vector2(500, 650)
+
+var position_to_return = Vector2(0, 0)
 
 signal player_hit(pos)
 
