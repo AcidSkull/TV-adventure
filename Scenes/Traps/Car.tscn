@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Textures/Traps/Cars.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Textures/Traps/Wheel.png" type="Texture" id=2]
@@ -6,21 +6,28 @@
 [ext_resource path="res://Assets/Textures/Environment/Smoke.png" type="Texture" id=4]
 
 [sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0.0130719, 0.0261438, 0.777778, 0.993464, 1 )
-colors = PoolColorArray( 0.385621, 0.385621, 0.385621, 1, 0, 0, 0, 1, 0.735532, 0.735532, 0.735532, 1, 0.962219, 0.962219, 0.962219, 1, 1, 1, 1, 1 )
+offsets = PoolRealArray( 0, 0.464052 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.285915, 0.290103, 0.303711, 1 )
 
 [sub_resource type="GradientTexture" id=5]
 gradient = SubResource( 4 )
 
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0.738636, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.632955 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
+
 [sub_resource type="ParticlesMaterial" id=6]
 flag_disable_z = true
-direction = Vector3( 1, -1, 0 )
-gravity = Vector3( 40, -20, 0 )
+direction = Vector3( 1, 1, 0 )
+gravity = Vector3( 30, -10, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 angle = 426.1
 scale = 0.5
 scale_random = 0.8
+scale_curve = SubResource( 8 )
 color_ramp = SubResource( 5 )
 
 [sub_resource type="Animation" id=1]
@@ -101,9 +108,11 @@ collision_mask = 3
 mode = 3
 script = ExtResource( 3 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 47, 6 )
-amount = 3
+[node name="Smoke" type="Particles2D" parent="."]
+position = Vector2( 47, 7 )
+rotation = -0.47822
+amount = 4
+speed_scale = 2.0
 process_material = SubResource( 6 )
 texture = ExtResource( 4 )
 
