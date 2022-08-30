@@ -106,7 +106,6 @@ func _on_InvulnerableEffect_timeout():
 	animationBlink.play("Stop")
 
 func _on_HurtBox_area_entered(area):
-	print(area)
 	if area.is_in_group("hitbox"):
 		if area.is_in_group("trap"):
 			return_when_hit_trap(area.position_to_return)
