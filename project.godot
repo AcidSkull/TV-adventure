@@ -30,6 +30,7 @@ window/size/width=304
 window/size/height=160
 window/size/resizable=false
 window/size/fullscreen=true
+mouse_cursor/custom_image="res://Assets/Textures/Cursor.png"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 
