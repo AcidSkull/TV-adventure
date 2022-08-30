@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Textures/Enemies/Dron.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Enemies/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Enemies/Dron.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 4 )
@@ -61,11 +61,11 @@ extents = Vector2( 10, 4.5 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 5, 1 )
 
-[node name="Dron" type="KinematicBody2D"]
+[node name="Dron" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 4
+mode = 3
 script = ExtResource( 2 )
-gravity = 0.0
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )

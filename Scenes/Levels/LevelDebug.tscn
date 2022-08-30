@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Enemies.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -19,7 +19,6 @@
 [ext_resource path="res://Scenes/Enemies/Tractor.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Effects/Explosion.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Mechanics/Camera2D.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/Levels/light_shadow_light.png" type="Texture" id=20]
 [ext_resource path="res://Scenes/Mechanics/WorldEnvironment.tscn" type="PackedScene" id=21]
 
 [node name="LevelDebug" type="Node"]
@@ -224,11 +223,6 @@ position = Vector2( 13, 1 )
 [node name="CellDoor" parent="." instance=ExtResource( 5 )]
 position = Vector2( -79, 116 )
 coins_to_open = 2
-
-[node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 235, -24 )
-texture = ExtResource( 20 )
-color = Color( 0.643137, 0.0823529, 0.0823529, 1 )
 
 [connection signal="coin_collected" from="Player" to="HUD" method="_on_Player_coin_collected"]
 [connection signal="coin_collected" from="Player" to="Music" method="_on_Player_coin_collected"]

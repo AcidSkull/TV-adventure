@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Textures/Enemies/Tractor.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Enemies/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Enemies/Tractor.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 5.5 )
