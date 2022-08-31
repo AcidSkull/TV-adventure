@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Assets/Textures/Enemies/Tractor.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Enemies/Tractor.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Enemies/Android.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Textures/Enemies/Android.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 5.5 )
+extents = Vector2( 7, 9 )
 
 [sub_resource type="Animation" id=2]
-resource_name = "Moving_left"
+resource_name = "Moving"
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -24,9 +24,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "Moving_right"
-length = 0.4
-loop = true
+length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -34,57 +32,55 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 4, 4, 5, 6 ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
 }
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 12, 6 )
+extents = Vector2( 11.5, 7 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 5.5, 1 )
+extents = Vector2( 3, 1.5 )
 
-[node name="Tractor" type="KinematicBody2D"]
-z_index = 1
+[node name="Android" type="KinematicBody2D"]
 collision_layer = 5
-script = ExtResource( 2 )
+script = ExtResource( 1 )
+speed = 65
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-hframes = 3
-vframes = 3
-frame = 2
+texture = ExtResource( 2 )
+hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0, 1.5 )
+position = Vector2( 0, 7 )
 shape = SubResource( 1 )
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Moving = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
 [node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 0, 8 )
 enabled = true
 cast_to = Vector2( -10, 0 )
 collision_mask = 3
-collide_with_areas = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Moving_left = SubResource( 2 )
-anims/Moving_right = SubResource( 3 )
 
 [node name="HitBox" type="Area2D" parent="." groups=["hitbox"]]
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2( -3, 2 )
+position = Vector2( -3.5, 9 )
 shape = SubResource( 4 )
 
 [node name="HurtBox" type="Area2D" parent="."]
-visible = false
+position = Vector2( 0, 6 )
+z_index = 1
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2( -1.5, -5 )
+position = Vector2( 0, -9.5 )
 shape = SubResource( 5 )
