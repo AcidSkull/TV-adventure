@@ -42,21 +42,25 @@ tracks/0/keys = {
 extents = Vector2( 11.5, 7 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 3, 1.5 )
+extents = Vector2( 1, 1 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 37.5, 15.5 )
+extents = Vector2( 37, 11 )
 
 [node name="Android" type="KinematicBody2D"]
 collision_layer = 5
 script = ExtResource( 1 )
 speed = 65
 
+[node name="ChaseTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 7 )
 shape = SubResource( 1 )
 
@@ -65,12 +69,12 @@ anims/Moving = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0, 8 )
+position = Vector2( 0, 10 )
 enabled = true
 cast_to = Vector2( -10, 0 )
-collision_mask = 3
 
 [node name="HitBox" type="Area2D" parent="." groups=["hitbox"]]
+visible = false
 collision_layer = 4
 collision_mask = 0
 
@@ -79,25 +83,23 @@ position = Vector2( -3.5, 9 )
 shape = SubResource( 4 )
 
 [node name="HurtBox" type="Area2D" parent="."]
+visible = false
 position = Vector2( 0, 6 )
 z_index = 1
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2( 0, -9.5 )
+position = Vector2( 0, -9 )
 shape = SubResource( 5 )
 
 [node name="DetectionBox" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionBox"]
-position = Vector2( -29.5, 0.5 )
+position = Vector2( -30, 5 )
 shape = SubResource( 6 )
 
-[node name="ChaseTimer" type="Timer" parent="."]
-wait_time = 4.0
-one_shot = true
-
+[connection signal="timeout" from="ChaseTimer" to="." method="_on_ChaseTimer_timeout"]
 [connection signal="body_entered" from="DetectionBox" to="." method="_on_DetectionBox_body_entered"]
 [connection signal="body_exited" from="DetectionBox" to="." method="_on_DetectionBox_body_exited"]
-[connection signal="timeout" from="ChaseTimer" to="." method="_on_ChaseTimer_timeout"]
