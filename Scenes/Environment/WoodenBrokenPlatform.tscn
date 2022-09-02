@@ -59,7 +59,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=5]
 length = 0.001
 
-[node name="WoodenBrokenPlatform" type="Area2D"]
+[node name="BrokenPlatform" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource( 1 )

@@ -12,6 +12,7 @@ extents = Vector2( 8, 2 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "Fly"
+length = 2.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
