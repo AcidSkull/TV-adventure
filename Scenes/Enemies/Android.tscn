@@ -45,10 +45,11 @@ extents = Vector2( 11.5, 7 )
 extents = Vector2( 1, 1 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 37, 11 )
+extents = Vector2( 37, 11.5 )
 
 [node name="Android" type="KinematicBody2D"]
-collision_layer = 5
+collision_layer = 4
+collision_mask = 7
 script = ExtResource( 1 )
 speed = 65
 
@@ -69,6 +70,7 @@ anims/Moving = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
 position = Vector2( 0, 10 )
 enabled = true
 cast_to = Vector2( -10, 0 )
@@ -97,7 +99,7 @@ shape = SubResource( 5 )
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionBox"]
-position = Vector2( -30, 5 )
+position = Vector2( -30, 4.5 )
 shape = SubResource( 6 )
 
 [connection signal="timeout" from="ChaseTimer" to="." method="_on_ChaseTimer_timeout"]

@@ -4,7 +4,6 @@ onready var sprite = $Sprite
 onready var deteciton_box = $DetectionBox
 onready var chase_timer = $ChaseTimer
 
-var jump_strength = 300.0
 var player = null
 
 func _ready():
@@ -48,4 +47,3 @@ func _on_ChaseTimer_timeout():
 	player = null
 	speed = 45
 	sprite.modulate = Color(1, 1, 1)
-
