@@ -70,7 +70,6 @@ anims/Moving = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-visible = false
 position = Vector2( 0, 10 )
 enabled = true
 cast_to = Vector2( -10, 0 )

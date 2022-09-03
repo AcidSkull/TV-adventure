@@ -10,12 +10,12 @@ onready var player = get_tree().root.get_node("Level2/Player")
 
 func _ready():
 	var _unused_variable = connect("player_hit", player, "on_car_hit")
-	
+
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	
+
 	var random_number = rng.randi_range(0, 4)
-	
+
 	$Sprite.frame = random_number
 
 func _physics_process(delta):

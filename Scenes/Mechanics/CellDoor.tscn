@@ -10,6 +10,8 @@ extents = Vector2( 9, 23.5 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 8
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=3]

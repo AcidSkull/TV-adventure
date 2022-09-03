@@ -26,10 +26,10 @@ func moving(delta):
 		if player.position.x > position.x:
 			velocity.x = speed
 		else:
-			velocity.x = -speed
+			velocity.x = -speed         
 	else:
 		velocity.x = -speed if moving_left else speed
-		
+	
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 

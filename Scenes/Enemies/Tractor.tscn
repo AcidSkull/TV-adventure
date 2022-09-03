@@ -64,6 +64,7 @@ position = Vector2( 0, 1.5 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
 enabled = true
 cast_to = Vector2( -10, 0 )
 collision_mask = 3
@@ -74,6 +75,7 @@ anims/Moving_left = SubResource( 2 )
 anims/Moving_right = SubResource( 3 )
 
 [node name="HitBox" type="Area2D" parent="." groups=["hitbox"]]
+visible = false
 collision_layer = 4
 collision_mask = 0
 
