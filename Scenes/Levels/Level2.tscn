@@ -222,7 +222,7 @@ texture = ExtResource( 12 )
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1536, 224 )
+position = Vector2( 0, 501 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
