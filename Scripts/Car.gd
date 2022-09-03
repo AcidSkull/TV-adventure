@@ -6,7 +6,7 @@ var position_to_return = Vector2(0, 0)
 
 signal player_hit(pos)
 
-onready var player = get_parent().get_node("Player")
+onready var player = get_tree().root.get_node("Level2/Player")
 
 func _ready():
 	var _unused_variable = connect("player_hit", player, "on_car_hit")
