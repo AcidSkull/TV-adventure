@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scenes/Mechanics/Music.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Scenes/Enemies/Android.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Scenes/Environment/Boxes.tscn" type="PackedScene" id=26]
 [ext_resource path="res://Scenes/Enemies/Tractor.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Environment/BrickBrokenPlatform.tscn" type="PackedScene" id=28]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -56,6 +57,80 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Curve2D" id=5]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -2, 9, 0, 0, 0, 0, -2, -48 )
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Fly"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.99 ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -1, 9, 0, 0, 0, 0, -155, 9 )
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Fly"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.99 ]
+}
+
+[sub_resource type="Animation" id=10]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
@@ -198,7 +273,48 @@ playback_speed = 0.5
 anims/Fly = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 
+[node name="MovingPlatform3" parent="MovingPlatforms" instance=ExtResource( 17 )]
+position = Vector2( 1330, 288 )
+curve = SubResource( 5 )
+
+[node name="KinematicBody2D" parent="MovingPlatforms/MovingPlatform3" index="0"]
+position = Vector2( -2, 9 )
+
+[node name="Sprite" parent="MovingPlatforms/MovingPlatform3/KinematicBody2D" index="1"]
+texture = ExtResource( 16 )
+
+[node name="PathFollow2D" parent="MovingPlatforms/MovingPlatform3" index="1"]
+position = Vector2( -2, 9 )
+loop = false
+
+[node name="AnimationPlayer" parent="MovingPlatforms/MovingPlatform3/PathFollow2D" index="1"]
+playback_speed = 0.5
+anims/Fly = SubResource( 6 )
+anims/RESET = SubResource( 7 )
+
+[node name="MovingPlatform4" parent="MovingPlatforms" instance=ExtResource( 17 )]
+position = Vector2( 1314, 216 )
+curve = SubResource( 8 )
+
+[node name="KinematicBody2D" parent="MovingPlatforms/MovingPlatform4" index="0"]
+position = Vector2( -1, 9 )
+
+[node name="Sprite" parent="MovingPlatforms/MovingPlatform4/KinematicBody2D" index="1"]
+texture = ExtResource( 16 )
+
+[node name="PathFollow2D" parent="MovingPlatforms/MovingPlatform4" index="1"]
+position = Vector2( -1, 9 )
+loop = false
+
+[node name="AnimationPlayer" parent="MovingPlatforms/MovingPlatform4/PathFollow2D" index="1"]
+playback_speed = 0.5
+anims/Fly = SubResource( 9 )
+anims/RESET = SubResource( 10 )
+
 [node name="BrokenPlatforms" type="Node2D" parent="."]
+
+[node name="BrokenPlatform" parent="BrokenPlatforms" instance=ExtResource( 28 )]
+position = Vector2( 1589, 240 )
 
 [node name="Coins" type="Node2D" parent="."]
 
@@ -516,11 +632,35 @@ position = Vector2( 1632, 368 )
 [node name="Android2" parent="Enemies" instance=ExtResource( 25 )]
 position = Vector2( 1664, 272 )
 
+[node name="Android4" parent="Enemies" instance=ExtResource( 25 )]
+position = Vector2( 1360, 93 )
+
+[node name="Android5" parent="Enemies" instance=ExtResource( 25 )]
+position = Vector2( 1477, 224 )
+
+[node name="Android6" parent="Enemies" instance=ExtResource( 25 )]
+position = Vector2( 1062, 192 )
+
+[node name="Android7" parent="Enemies" instance=ExtResource( 25 )]
+position = Vector2( 1020, 192 )
+
 [node name="Android3" parent="Enemies" instance=ExtResource( 25 )]
 position = Vector2( 1792, 272 )
 
 [node name="Tractor" parent="Enemies" instance=ExtResource( 27 )]
 position = Vector2( 1855, 328 )
+
+[node name="Tractor2" parent="Enemies" instance=ExtResource( 27 )]
+position = Vector2( 1343, 312 )
+
+[node name="Tractor3" parent="Enemies" instance=ExtResource( 27 )]
+position = Vector2( 1257, 312 )
+
+[node name="Tractor4" parent="Enemies" instance=ExtResource( 27 )]
+position = Vector2( 1425, 232 )
+
+[node name="Tractor5" parent="Enemies" instance=ExtResource( 27 )]
+position = Vector2( 1112, 200 )
 
 [node name="Collisions" type="Node2D" parent="."]
 
@@ -579,3 +719,5 @@ position = Vector2( 1456, 488 )
 
 [editable path="MovingPlatforms/MovingPlatform"]
 [editable path="MovingPlatforms/MovingPlatform2"]
+[editable path="MovingPlatforms/MovingPlatform3"]
+[editable path="MovingPlatforms/MovingPlatform4"]

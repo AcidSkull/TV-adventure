@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/brick-crushing.mp3-44e743fabb63ee66aeefd752b8c10289.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/brick-crushing.mp3"
+dest_files=[ "res://.import/brick-crushing.mp3-44e743fabb63ee66aeefd752b8c10289.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

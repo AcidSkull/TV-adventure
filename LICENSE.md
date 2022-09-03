@@ -26,3 +26,4 @@ explosion by dklon licensed CC BY 3.0: https://creativecommons.org/licenses/by/3
 crack by Independent.nu licensed CC0: https://creativecommons.org/publicdomain/zero/1.0/
 door_open by mixkit licensed by mixkit User Terms: https://mixkit.co/terms/
 circular-saw from https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=25584
+brick-crushing by Mountain852 licensed CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/
