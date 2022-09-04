@@ -22,14 +22,7 @@ func animation():
 		sprite.flip_h = false
 
 func moving(delta):
-	if player != null:
-		if player.position.x > position.x:
-			velocity.x = speed
-		else:
-			velocity.x = -speed         
-	else:
-		velocity.x = -speed if moving_left else speed
-	
+	velocity.x = -speed if moving_left else speed
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 
