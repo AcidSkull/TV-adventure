@@ -4,8 +4,6 @@ onready var sprite = $Sprite
 onready var deteciton_box = $DetectionBox
 onready var chase_timer = $ChaseTimer
 
-var player = null
-
 func _ready():
 	$AnimationPlayer.play("Moving")
 
@@ -28,7 +26,6 @@ func moving(delta):
 
 func _on_DetectionBox_body_entered(body):
 	if body.is_in_group("player"):
-		player = body
 		speed = 145
 		sprite.modulate = Color(3, 1, 1)
 
@@ -37,6 +34,5 @@ func _on_DetectionBox_body_exited(body):
 		chase_timer.start()
 
 func _on_ChaseTimer_timeout():
-	player = null
 	speed = 45
 	sprite.modulate = Color(1, 1, 1)
