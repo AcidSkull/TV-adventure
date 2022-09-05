@@ -194,7 +194,7 @@ position = Vector2( 277, 69 )
 position = Vector2( 154, 72 )
 
 [node name="CollisionBox6" parent="CollisionBoxes" instance=ExtResource( 7 )]
-position = Vector2( -383, 296 )
+position = Vector2( -335, 298 )
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 0, 1 )
@@ -223,7 +223,7 @@ position = Vector2( 240, 71 )
 position = Vector2( -117, 289 )
 
 [node name="Android2" parent="Enemies" instance=ExtResource( 20 )]
-position = Vector2( -307, 285 )
+position = Vector2( -296, 289 )
 
 [node name="Effects" type="Node2D" parent="."]
 position = Vector2( -5, 30 )
