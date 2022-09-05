@@ -33,11 +33,11 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "clips": [ {
-"end_offset": 0.69,
+"end_offset": 0.62,
 "start_offset": 0.0,
 "stream": ExtResource( 2 )
 } ],
-"times": PoolRealArray( 0.2 )
+"times": PoolRealArray( 0.3 )
 }
 
 [sub_resource type="Animation" id=4]
@@ -102,6 +102,7 @@ one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
+volume_db = 24.0
 max_distance = 100.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

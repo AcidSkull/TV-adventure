@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Enemies.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Scenes/Mechanics/CollisionBox.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Mechanics/HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Environment/WoodenBrokenPlatform.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Mechanics/Music.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Environment/MovingPlatfrom.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Collectibles/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Collectibles/HealthPoint.tscn" type="PackedScene" id=13]
@@ -110,8 +109,6 @@ position = Vector2( -102, 78 )
 
 [node name="MovingPlatform3" parent="." instance=ExtResource( 11 )]
 position = Vector2( 5, 74 )
-
-[node name="Music" parent="." instance=ExtResource( 10 )]
 
 [node name="Coins" type="Node2D" parent="."]
 

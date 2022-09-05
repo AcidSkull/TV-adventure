@@ -10,6 +10,8 @@ onready var animation = $AnimationPlayer
 onready var animationBlink = $BlinkAnimation
 onready var invulnerable_timer = $InvulnerableEffect
 onready var coyote_timer = $CoyoteTimer
+onready var coins_sound = $Music/Coins
+onready var heal_sound = $Music/HeartPoints
 
 onready var health = MAX_HEALTH
 
@@ -27,15 +29,11 @@ func _ready():
 	checkpoint = global_position
 	
 	var HUD = get_parent().get_node("HUD")
-	var music = get_parent().get_node("Music")
 	var camera = get_parent().get_node("Camera2D")
 	var _unused
 	
 	_unused = connect("coin_collected", HUD, "_on_Player_coin_collected")
 	_unused = connect("change_health", HUD, "_on_change_health")
-	
-	_unused = connect("coin_collected", music, "_on_Player_coin_collected")
-	_unused = connect("heal", music, "_on_Player_heal")
 	
 	_unused = connect("take_damage", camera, "add_shake_strength")
 
@@ -114,9 +112,11 @@ func _on_HurtBox_area_entered(area):
 	elif area.is_in_group("coin"):
 		coins += 1
 		emit_signal("coin_collected")
+		coins_sound.play()
 		area.queue_free()
 	elif area.is_in_group("health"):
 		_set_health(health + 1)
+		heal_sound.play()
 		emit_signal("heal")
 		area.queue_free()
 
