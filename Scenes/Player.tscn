@@ -219,6 +219,7 @@ shape = SubResource( 31 )
 
 [node name="Coins" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 5 )
+mix_target = 2
 
 [node name="HeartPoints" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 4 )

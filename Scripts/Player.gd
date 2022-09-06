@@ -123,8 +123,9 @@ func _on_HurtBox_area_entered(area):
 func setCheckpoint(FlagPosition):
 	checkpoint = FlagPosition
 
-func on_car_hit(pos):
-	return_when_hit_trap(pos)
+func on_car_hit():
+	_set_health(0)
+	emit_signal("take_damage")
 
 func return_when_hit_trap(pos):
 	if pos.x != 0 and pos.y != 0:

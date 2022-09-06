@@ -4,7 +4,7 @@ export (int) var speed = 85
 
 var position_to_return = Vector2(0, 0)
 
-signal player_hit(pos)
+signal player_hit
 
 onready var player = get_tree().root.get_node("Level2/Player")
 
@@ -23,7 +23,7 @@ func _physics_process(delta):
 
 func _on_Hitbox_body_entered(body):
 	if body.is_in_group("player"):
-		emit_signal("player_hit", position_to_return)
+		emit_signal("player_hit")
 
 func _on_Hitbox_area_entered(area):
 	if area.is_in_group("despawn"):
