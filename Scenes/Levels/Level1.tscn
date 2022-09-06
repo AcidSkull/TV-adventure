@@ -1617,7 +1617,8 @@ editor_draw_limits = true
 position = Vector2( 1, 0 )
 motion_mirroring = Vector2( 500, 0 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky"]
@@ -1631,7 +1632,8 @@ position = Vector2( 0, 7 )
 motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 500, 0 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/EvenFurtherTrees"]
@@ -1643,7 +1645,8 @@ modulate = Color( 0.364706, 0.623529, 0.427451, 1 )
 motion_scale = Vector2( 0.7, 1 )
 motion_mirroring = Vector2( 500, 0 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/FurtherTrees"]
@@ -1655,7 +1658,8 @@ modulate = Color( 0.411765, 0.501961, 0.447059, 1 )
 motion_scale = Vector2( 0.8, 1 )
 motion_mirroring = Vector2( 512, 0 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/BigTrees"]
