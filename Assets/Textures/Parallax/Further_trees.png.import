@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Further_treespng.png-894ec1c4f20d1453c3adf9de0389b5cb.stex"
+path="res://.import/Further_trees.png-77772a9c63599fcf931849d648c54db9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Parallax/Further_treespng.png"
-dest_files=[ "res://.import/Further_treespng.png-894ec1c4f20d1453c3adf9de0389b5cb.stex" ]
+source_file="res://Assets/Textures/Parallax/Further_trees.png"
+dest_files=[ "res://.import/Further_trees.png-77772a9c63599fcf931849d648c54db9.stex" ]
 
 [params]
 
