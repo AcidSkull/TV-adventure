@@ -1853,6 +1853,7 @@ position_to_return = Vector2( 290, 640 )
 [node name="SawBlade9" parent="Traps" instance=ExtResource( 10 )]
 position = Vector2( 390, 116 )
 scale = Vector2( 0.7, 0.7 )
+position_to_return = Vector2( 517, 432 )
 
 [node name="SawBlade10" parent="Traps" instance=ExtResource( 10 )]
 position = Vector2( 494, 41 )
@@ -4497,7 +4498,7 @@ position = Vector2( 0, 326 )
 position = Vector2( 611, 316 )
 
 [node name="HealthPoint3" parent="HeartPoints" instance=ExtResource( 12 )]
-position = Vector2( 517, 104 )
+position = Vector2( 518, 104 )
 
 [node name="HealthPoint4" parent="HeartPoints" instance=ExtResource( 12 )]
 position = Vector2( 522, 35 )
