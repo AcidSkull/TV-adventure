@@ -1622,8 +1622,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Sky"]
-position = Vector2( 576, 334 )
-scale = Vector2( 2.307, 1 )
+position = Vector2( 500, 334 )
+scale = Vector2( 2, 1 )
 texture = ExtResource( 25 )
 
 [node name="EvenFurtherTrees" type="ParallaxLayer" parent="ParallaxBackground"]
