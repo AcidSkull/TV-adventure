@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Mechanics/Camera2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Effects/Explosion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Mechanics/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Mechanics/WorldEnvironment.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Environment/Environment.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Enemies/Enemies.gd" type="Script" id=7]
+
+[node name="Level3" type="Node"]
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 5 )]
+
+[node name="Camera2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152, 92 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -1 )
+
+[node name="Environment" parent="." instance=ExtResource( 6 )]
+
+[node name="Explosion" parent="." instance=ExtResource( 2 )]
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+
+[node name="Enemies" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="MovingPlatforms" type="Node2D" parent="."]
+
+[node name="BrokenPlatforms" type="Node2D" parent="."]
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="HealthPoints" type="Node2D" parent="."]
+
+[node name="Effects" type="Node2D" parent="."]
+
+[node name="Collisions" type="Node2D" parent="."]
+
+[node name="Traps" type="Node2D" parent="."]
