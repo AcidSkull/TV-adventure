@@ -12,6 +12,7 @@ onready var invulnerable_timer = $InvulnerableEffect
 onready var coyote_timer = $CoyoteTimer
 onready var coins_sound = $Music/Coins
 onready var heal_sound = $Music/HeartPoints
+onready var crash_sound = $Music/Crash
 
 onready var health = MAX_HEALTH
 
@@ -26,6 +27,7 @@ var coins = 0
 var checkpoint
 
 func _ready():
+	
 	checkpoint = global_position
 	
 	var HUD = get_parent().get_node("HUD")
@@ -126,6 +128,7 @@ func setCheckpoint(FlagPosition):
 func on_car_hit():
 	_set_health(0)
 	emit_signal("take_damage")
+	crash_sound.play()
 
 func return_when_hit_trap(pos):
 	if pos.x != 0 and pos.y != 0:
