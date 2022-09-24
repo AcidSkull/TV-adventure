@@ -13,6 +13,7 @@ onready var coyote_timer = $CoyoteTimer
 onready var coins_sound = $Music/Coins
 onready var heal_sound = $Music/HeartPoints
 onready var crash_sound = $Music/Crash
+onready var jump_sound = $Music/Jump
 
 onready var health = MAX_HEALTH
 
@@ -61,7 +62,10 @@ func _physics_process(delta: float) -> void:
 	# Jumping
 	if Input.is_action_pressed("jump") and (is_on_floor() or !coyote_timer.is_stopped()):
 		velocity.y = -jump_strength
-			
+	
+	# Playing sound when jump
+	if Input.is_action_pressed("jump") and is_on_floor():
+		jump_sound.play()
 		
 	# Checking if player is in air to play animation of jumping
 	if !is_on_floor():
