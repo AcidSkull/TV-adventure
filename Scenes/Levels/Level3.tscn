@@ -15,7 +15,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, -290 )
+"points": PoolVector2Array( 0, 0, 0, 0, 0, -2, 0, 0, 0, 0, 0, -345 )
 }
 
 [sub_resource type="Curve2D" id=2]
