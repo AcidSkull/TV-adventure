@@ -31,7 +31,6 @@ func _ready():
 		hurtbox.scale.y = -1
 		ray.scale.y = 50
 		sprite.frame = 13
-		
 
 func fire():
 	var bullet_instance = bullet.instance()
@@ -52,7 +51,6 @@ func _on_DetectionRange_body_exited(body):
 	if body.is_in_group("player"):
 		animation.play_backwards("Opening_" + floor_string)
 		target = null
-
 
 func _on_CooldownTimer_timeout():
 	if target != null:

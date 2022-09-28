@@ -6,7 +6,7 @@ var speed = 2
 var target = null
 
 func _ready():
-	look_vec = target.position - global_position
+	look_vec = target.global_position - global_position
 
 func _physics_process(delta):
 	rove = Vector2.ZERO

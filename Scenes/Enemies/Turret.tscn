@@ -53,7 +53,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 100, 42.5 )
+extents = Vector2( 66, 64 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 3, 1 )
@@ -90,6 +90,7 @@ shape = SubResource( 6 )
 one_way_collision_margin = 0.0
 
 [node name="HurtBox" type="Area2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 0
 
