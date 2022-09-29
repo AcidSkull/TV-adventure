@@ -240,13 +240,13 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=79]
-points = PoolVector2Array( 16, 7, 32, 7, 32, 32, 16, 32 )
+points = PoolVector2Array( 16, 6, 32, 6, 32, 32, 16, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=80]
-points = PoolVector2Array( 0, 7, 32, 7, 32, 32, 0, 32 )
+points = PoolVector2Array( 0, 6, 32, 6, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=81]
-points = PoolVector2Array( 0, 7, 16, 7, 16, 32, 0, 32 )
+points = PoolVector2Array( 0, 6, 16, 6, 16, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=82]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 32, 0, 32 )
@@ -267,7 +267,7 @@ points = PoolVector2Array( 16, 0, 32, 0, 32, 16, 16, 16 )
 points = PoolVector2Array( 16, 0, 32, 0, 32, 32, 16, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=88]
-points = PoolVector2Array( 0, 7, 32, 7, 32, 32, 0, 32 )
+points = PoolVector2Array( 0, 6, 32, 6, 32, 32, 0, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=89]
 points = PoolVector2Array( 16, 0, 32, 0, 32, 32, 16, 32 )
@@ -282,13 +282,13 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 points = PoolVector2Array( 0, 32, 0, 0, 32, 0, 32, 16, 16, 16, 16, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=93]
-points = PoolVector2Array( 16, 0, 16, 7, 32, 7, 32, 32, 0, 32, 0, 0 )
+points = PoolVector2Array( 16, 0, 16, 6, 32, 6, 32, 32, 0, 32, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=94]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 16, 32, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=95]
-points = PoolVector2Array( 0, 7, 16, 7, 16, 0, 32, 0, 32, 32, 0, 32 )
+points = PoolVector2Array( 0, 6, 16, 6, 16, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=1]
 0/name = "Grass.png 0"

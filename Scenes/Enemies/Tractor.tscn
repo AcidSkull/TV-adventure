@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Enemies/Tractor.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7, 5.5 )
+extents = Vector2( 5, 5.5 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Moving_left"
@@ -50,6 +50,7 @@ extents = Vector2( 5.5, 1 )
 z_index = 1
 collision_layer = 5
 collision_mask = 7
+collision/safe_margin = 1.0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -60,7 +61,7 @@ frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( 0, 1.5 )
+position = Vector2( -1, 1.5 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
