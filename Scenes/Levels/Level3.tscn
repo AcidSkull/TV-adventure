@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Scenes/Mechanics/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Effects/Explosion.tscn" type="PackedScene" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scenes/Enemies/Dron.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Enemies/Android.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Enemies/Tractor.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Mechanics/CollisionBox.tscn" type="PackedScene" id=20]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -797,7 +798,7 @@ z_index = -1
 tile_data = PoolIntArray( 655426, 0, 0, 655439, 0, 0, 720960, 3, 0, 720973, 3, 0, 983078, 0, 0, 983085, 0, 0, 983092, 0, 0, 1048612, 3, 0, 1048619, 3, 0, 1048626, 3, 0, 1114194, 0, 0, 1114201, 0, 0, 1114208, 0, 0, 1179728, 3, 0, 1179735, 3, 0, 1179742, 3, 0, 1245292, 0, 0, 1245298, 0, 0, 1310826, 3, 0, 1310832, 3, 0, 1900616, 0, 0, 1900625, 0, 0, 1900634, 0, 0, 1966150, 3, 0, 1966159, 3, 0, 1966168, 3, 0, 2490395, 0, 0, 2490402, 0, 0, 2490409, 0, 0, 2555929, 3, 0, 2555936, 3, 0, 2555943, 3, 0, 2621540, 0, 0, 2621547, 0, 0, 2621554, 0, 0, 2687074, 3, 0, 2687081, 3, 0, 2687088, 3, 0, 3539004, 0, 0, 3539011, 0, 0, 3539018, 0, 0, 3539024, 0, 0, 3539031, 0, 0, 3539038, 0, 0, 3604538, 3, 0, 3604545, 3, 0, 3604552, 3, 0, 3604558, 3, 0, 3604565, 3, 0, 3604572, 3, 0, 4259940, 0, 0, 4259947, 0, 0, 4259954, 0, 0, 4325411, 0, 0, 4325418, 0, 0, 4325425, 0, 0, 4325474, 3, 0, 4325481, 3, 0, 4325488, 3, 0, 4390945, 3, 0, 4390952, 3, 0, 4390959, 3, 0, 4980763, 0, 0, 4980770, 0, 0, 4980777, 0, 0, 4980784, 0, 0, 4980791, 0, 0, 4980798, 0, 0, 4980805, 0, 0, 4980814, 0, 0, 4980821, 0, 0, 4980828, 0, 0, 4980835, 0, 0, 4980842, 0, 0, 4980849, 0, 0, 5046297, 3, 0, 5046304, 3, 0, 5046311, 3, 0, 5046318, 3, 0, 5046325, 3, 0, 5046332, 3, 0, 5046339, 3, 0, 5046348, 3, 0, 5046355, 3, 0, 5046362, 3, 0, 5046369, 3, 0, 5046376, 3, 0, 5046383, 3, 0, 6291501, 0, 0, 6291509, 0, 0, 6291517, 0, 0, 6291541, 0, 0, 6291549, 0, 0, 6291557, 0, 0, 6357035, 3, 0, 6357043, 3, 0, 6357051, 3, 0, 6357075, 3, 0, 6357083, 3, 0, 6357091, 3, 0, 6881325, 0, 0, 6881333, 0, 0, 6881341, 0, 0, 6881349, 0, 0, 6881357, 0, 0, 6881365, 0, 0, 6881373, 0, 0, 6881381, 0, 0, 6946859, 3, 0, 6946867, 3, 0, 6946875, 3, 0, 6946883, 3, 0, 6946891, 3, 0, 6946899, 3, 0, 6946907, 3, 0, 6946915, 3, 0, 7471149, 0, 0, 7471157, 0, 0, 7471165, 0, 0, 7471173, 0, 0, 7471181, 0, 0, 7471189, 0, 0, 7471197, 0, 0, 7471205, 0, 0, 7536683, 3, 0, 7536691, 3, 0, 7536699, 3, 0, 7536707, 3, 0, 7536715, 3, 0, 7536723, 3, 0, 7536731, 3, 0, 7536739, 3, 0, 8388653, 0, 0, 8388661, 0, 0, 8388669, 0, 0, 8388677, 0, 0, 8388685, 0, 0, 8388701, 0, 0, 8388709, 0, 0, 8454187, 3, 0, 8454195, 3, 0, 8454203, 3, 0, 8454211, 3, 0, 8454219, 3, 0, 8454227, 3, 0, 8454235, 3, 0, 8454243, 3, 0, 9043994, 0, 0, 9044001, 0, 0, 9044008, 0, 0, 9044015, 0, 0, 9044022, 0, 0, 9044029, 0, 0, 9044036, 0, 0, 9044045, 0, 0, 9044052, 0, 0, 9044059, 0, 0, 9044066, 0, 0, 9044073, 0, 0, 9044080, 0, 0, 9109528, 3, 0, 9109535, 3, 0, 9109542, 3, 0, 9109549, 3, 0, 9109556, 3, 0, 9109563, 3, 0, 9109570, 3, 0, 9109579, 3, 0, 9109586, 3, 0, 9109593, 3, 0, 9109600, 3, 0, 9109607, 3, 0, 9109614, 3, 0, 10158126, 0, 0, 10158133, 0, 0, 10158140, 0, 0, 10158147, 0, 0, 10158158, 0, 0, 10158165, 0, 0, 10158172, 0, 0, 10158179, 0, 0, 10223660, 3, 0, 10223667, 3, 0, 10223674, 3, 0, 10223681, 3, 0, 10223692, 3, 0, 10223699, 3, 0, 10223706, 3, 0, 10223713, 3, 0, 10879060, 0, 0, 10879070, 0, 0, 10944594, 3, 0, 10944604, 3, 0, 11141147, 0, 0, 11141154, 0, 0, 11141161, 0, 0, 11141168, 0, 0, 11141175, 0, 0, 11141182, 0, 0, 11206681, 3, 0, 11206688, 3, 0, 11206695, 3, 0, 11206702, 3, 0, 11206709, 3, 0, 11206716, 3, 0, 11665465, 0, 0, 11665473, 0, 0, 11730999, 3, 0, 11731007, 3, 0, 11796580, 0, 0, 11796587, 0, 0, 11796594, 0, 0, 11862114, 3, 0, 11862121, 3, 0, 11862128, 3, 0, 12255269, 0, 0, 12255276, 0, 0, 12255283, 0, 0, 12320803, 3, 0, 12320810, 3, 0, 12320817, 3, 0, 12648549, 0, 0, 12648558, 0, 0, 12714083, 3, 0, 12714092, 3, 0, 12779578, 0, 0, 12779585, 0, 0, 12845112, 3, 0, 12845119, 3, 0, 13172762, 0, 0, 13172769, 0, 0, 13172776, 0, 0, 13172783, 0, 0, 13238296, 3, 0, 13238303, 3, 0, 13238310, 3, 0, 13238317, 3, 0, 13238353, 0, 0, 13238360, 0, 0, 13303887, 3, 0, 13303894, 3, 0, 13566012, 0, 0, 13566019, 0, 0, 13631546, 3, 0, 13631553, 3, 0, 13762652, 0, 0, 13762659, 0, 0, 13762666, 0, 0, 13762673, 0, 0, 13828186, 3, 0, 13828193, 3, 0, 13828200, 3, 0, 13828207, 3, 0, 14549032, 3, 0, 14549039, 3, 0, 14549046, 3, 0, 14549053, 3, 0, 14549073, 0, 0, 14549080, 0, 0, 14549087, 0, 0, 14549094, 0, 0, 14614607, 3, 0, 14614614, 3, 0, 14614621, 3, 0, 14614628, 3, 0, 14811162, 3, 0, 15335450, 3, 0, 15728666, 0, 0, 15728672, 0, 0, 15728678, 0, 0, 15728684, 0, 0, 15728690, 0, 0, 15728696, 0, 0, 15728702, 0, 0, 15728708, 0, 0, 15728717, 0, 0, 15728723, 0, 0, 15728729, 0, 0, 15728735, 0, 0, 15728741, 0, 0, 15728747, 0, 0, 15728753, 0, 0, 15794200, 3, 0, 15794206, 3, 0, 15794212, 3, 0, 15794218, 3, 0, 15794224, 3, 0, 15794230, 3, 0, 15794236, 3, 0, 15794242, 3, 0, 15794251, 3, 0, 15794257, 3, 0, 15794263, 3, 0, 15794269, 3, 0, 15794275, 3, 0, 15794281, 3, 0, 15794287, 3, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1836, 347 )
+position = Vector2( 1791, 840 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 
@@ -895,7 +896,7 @@ position = Vector2( 1600, -1768 )
 position = Vector2( 1536, -1768 )
 
 [node name="BrokenPlatform41" parent="BrokenPlatforms" instance=ExtResource( 13 )]
-position = Vector2( 1606, -1360 )
+position = Vector2( 1616, -1361 )
 
 [node name="BrokenPlatform45" parent="BrokenPlatforms" instance=ExtResource( 13 )]
 position = Vector2( 848, -1156 )
@@ -1428,13 +1429,13 @@ position = Vector2( 1566, 3112 )
 position = Vector2( 998, 2066 )
 
 [node name="Dron3" parent="Enemies" instance=ExtResource( 17 )]
-position = Vector2( 1201, 3856 )
+position = Vector2( 1224, 3856 )
 
 [node name="Dron4" parent="Enemies" instance=ExtResource( 17 )]
-position = Vector2( 1115, 3856 )
+position = Vector2( 1096, 3855 )
 
 [node name="Dron5" parent="Enemies" instance=ExtResource( 17 )]
-position = Vector2( 752, 3144 )
+position = Vector2( 752, 3137 )
 
 [node name="Dron6" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 579, 2864 )
@@ -1459,6 +1460,9 @@ position = Vector2( 1204, 288 )
 
 [node name="Dron19" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 973, 879 )
+
+[node name="Dron22" parent="Enemies" instance=ExtResource( 17 )]
+position = Vector2( 487, 626 )
 
 [node name="Dron20" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 1252, 878 )
@@ -1701,7 +1705,10 @@ position = Vector2( 1198, 1864 )
 position = Vector2( 1045, 1723 )
 
 [node name="Tractor45" parent="Enemies" instance=ExtResource( 19 )]
-position = Vector2( 1338, 1723 )
+position = Vector2( 1357, 1723 )
+
+[node name="Tractor66" parent="Enemies" instance=ExtResource( 19 )]
+position = Vector2( 1357, 1723 )
 
 [node name="Tractor46" parent="Enemies" instance=ExtResource( 19 )]
 position = Vector2( 849, 1579 )
@@ -1814,6 +1821,15 @@ position = Vector2( 1421, 506 )
 [node name="Tractor72" parent="Enemies" instance=ExtResource( 19 )]
 position = Vector2( 1099, 902 )
 
+[node name="Android47" parent="Enemies" instance=ExtResource( 18 )]
+position = Vector2( 605, 642 )
+
+[node name="Android48" parent="Enemies" instance=ExtResource( 18 )]
+position = Vector2( 440, 642 )
+
+[node name="Tractor84" parent="Enemies" instance=ExtResource( 19 )]
+position = Vector2( 525, 646 )
+
 [node name="Tractor69" parent="Enemies" instance=ExtResource( 19 )]
 position = Vector2( 1750, 1080 )
 
@@ -1864,6 +1880,300 @@ position = Vector2( 969, 2522 )
 
 [node name="Collisions" type="Node2D" parent="."]
 position = Vector2( 0, 2256 )
+
+[node name="CollisionBox" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1089, -705 )
+
+[node name="CollisionBox2" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 752, -705 )
+
+[node name="CollisionBox3" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 752, -677 )
+
+[node name="CollisionBox4" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1216, -702 )
+
+[node name="CollisionBox71" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1220, -996 )
+
+[node name="CollisionBox72" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1135, -995 )
+
+[node name="CollisionBox73" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 528, -1158 )
+
+[node name="CollisionBox74" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 824, -1156 )
+
+[node name="CollisionBox75" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 824, -1185 )
+
+[node name="CollisionBox76" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1550, -1184 )
+
+[node name="CollisionBox77" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1550, -1173 )
+
+[node name="CollisionBox98" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1776, -1172 )
+
+[node name="CollisionBox78" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1568, -1348 )
+
+[node name="CollisionBox79" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1624, -1380 )
+
+[node name="CollisionBox80" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1455, -1378 )
+
+[node name="CollisionBox81" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 939, -1379 )
+
+[node name="CollisionBox82" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 939, -1347 )
+
+[node name="CollisionBox83" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 699, -1608 )
+
+[node name="CollisionBox84" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 695, -1630 )
+
+[node name="CollisionBox85" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1122, -1748 )
+
+[node name="CollisionBox86" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1491, -1751 )
+
+[node name="CollisionBox87" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1475, -1792 )
+
+[node name="CollisionBox88" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1794, -1791 )
+
+[node name="CollisionBox89" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1665, -1910 )
+
+[node name="CollisionBox90" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1570, -1943 )
+
+[node name="CollisionBox91" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1277, -1943 )
+
+[node name="CollisionBox92" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1328, -1968 )
+
+[node name="CollisionBox93" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1115, -1970 )
+
+[node name="CollisionBox94" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 867, -1973 )
+
+[node name="CollisionBox95" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 557, -1973 )
+
+[node name="CollisionBox96" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1564, -1572 )
+
+[node name="CollisionBox97" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1832, -1572 )
+
+[node name="CollisionBox5" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1638, -704 )
+
+[node name="CollisionBox6" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1638, -679 )
+
+[node name="CollisionBox7" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1637, -529 )
+
+[node name="CollisionBox8" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 730, -531 )
+
+[node name="CollisionBox9" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1329, -530 )
+
+[node name="CollisionBox10" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 728, -388 )
+
+[node name="CollisionBox11" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 727, -414 )
+
+[node name="CollisionBox12" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1225, -414 )
+
+[node name="CollisionBox13" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1644, -408 )
+
+[node name="CollisionBox14" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1644, -389 )
+
+[node name="CollisionBox15" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1655, -164 )
+
+[node name="CollisionBox16" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1263, -163 )
+
+[node name="CollisionBox17" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1351, -184 )
+
+[node name="CollisionBox18" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1197, -188 )
+
+[node name="CollisionBox19" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1013, -189 )
+
+[node name="CollisionBox20" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 834, -190 )
+
+[node name="CollisionBox21" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 984, -164 )
+
+[node name="CollisionBox22" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 700, -163 )
+
+[node name="CollisionBox23" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1127, -4 )
+
+[node name="CollisionBox24" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1186, -3 )
+
+[node name="CollisionBox25" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1711, -4 )
+
+[node name="CollisionBox26" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1746, -3 )
+
+[node name="CollisionBox27" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 625, -3 )
+
+[node name="CollisionBox28" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 656, -4 )
+
+[node name="CollisionBox29" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 720, 267 )
+
+[node name="CollisionBox30" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 416, 510 )
+
+[node name="CollisionBox31" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1026, 510 )
+
+[node name="CollisionBox32" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1646, 269 )
+
+[node name="CollisionBox33" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1558, 441 )
+
+[node name="CollisionBox34" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1279, 443 )
+
+[node name="CollisionBox35" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1568, 668 )
+
+[node name="CollisionBox36" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1844, 669 )
+
+[node name="CollisionBox37" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1443, 856 )
+
+[node name="CollisionBox38" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1586, 856 )
+
+[node name="CollisionBox39" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1550, 876 )
+
+[node name="CollisionBox40" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1807, 877 )
+
+[node name="CollisionBox41" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1416, 976 )
+
+[node name="CollisionBox42" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1570, 977 )
+
+[node name="CollisionBox43" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1451, 1018 )
+
+[node name="CollisionBox45" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1520, 1146 )
+
+[node name="CollisionBox46" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1856, 1148 )
+
+[node name="CollisionBox47" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1225, 1340 )
+
+[node name="CollisionBox48" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1672, 1340 )
+
+[node name="CollisionBox49" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1197, 1629 )
+
+[node name="CollisionBox50" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1121, 1628 )
+
+[node name="CollisionBox51" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1122, 1598 )
+
+[node name="CollisionBox52" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1198, 1600 )
+
+[node name="CollisionBox53" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 564, 1594 )
+
+[node name="CollisionBox55" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 517, 1516 )
+
+[node name="CollisionBox56" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 517, 1386 )
+
+[node name="CollisionBox57" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 600, 1324 )
+
+[node name="CollisionBox58" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 849, 1325 )
+
+[node name="CollisionBox59" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 875, 1326 )
+
+[node name="CollisionBox60" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1072, 1324 )
+
+[node name="CollisionBox61" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 904, 1099 )
+
+[node name="CollisionBox62" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 770, 1002 )
+
+[node name="CollisionBox63" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 903, 908 )
+
+[node name="CollisionBox64" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 912, 880 )
+
+[node name="CollisionBox66" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 900, 778 )
+
+[node name="CollisionBox68" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 875, 637 )
+
+[node name="CollisionBox69" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 550, 608 )
+
+[node name="CollisionBox70" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 856, 609 )
+
+[node name="CollisionBox67" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 557, 780 )
+
+[node name="CollisionBox65" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 716, 881 )
+
+[node name="CollisionBox54" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1701, 1598 )
+
+[node name="CollisionBox44" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 1248, 1018 )
 
 [node name="Effects" type="Node2D" parent="."]
 position = Vector2( 0, 2256 )
@@ -2132,7 +2442,7 @@ position = Vector2( 1737, -2070 )
 position_to_return = Vector2( 1836, 347 )
 
 [node name="SawBlade126" parent="Traps" instance=ExtResource( 15 )]
-position = Vector2( 1701, -2032 )
+position = Vector2( 1698.39, -2033.98 )
 position_to_return = Vector2( 1836, 347 )
 
 [node name="SawBlade112" parent="Traps" instance=ExtResource( 15 )]
@@ -2276,7 +2586,7 @@ position = Vector2( 1459, -1120 )
 position_to_return = Vector2( 808, 0 )
 
 [node name="SawBlade51" parent="Traps" instance=ExtResource( 15 )]
-position = Vector2( 1648, -1358 )
+position = Vector2( 1655, -1352 )
 position_to_return = Vector2( 1776, 1081 )
 
 [node name="SawBlade52" parent="Traps" instance=ExtResource( 15 )]
