@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://Scenes/Mechanics/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Effects/Explosion.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Scenes/Enemies/Android.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Enemies/Tractor.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Mechanics/CollisionBox.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Collectibles/HealthPoint.tscn" type="PackedScene" id=21]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -1355,6 +1356,75 @@ position = Vector2( 0, 2256 )
 [node name="HealthPoints" type="Node2D" parent="."]
 position = Vector2( 0, 2256 )
 
+[node name="HealthPoint" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 384, 1512 )
+
+[node name="HealthPoint2" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 384, 1386 )
+
+[node name="HealthPoint3" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1115, 1096 )
+
+[node name="HealthPoint4" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 384, 1000 )
+
+[node name="HealthPoint5" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 400, 246 )
+
+[node name="HealthPoint6" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1115, 263 )
+
+[node name="HealthPoint7" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1204, 262 )
+
+[node name="HealthPoint11" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 388, -11 )
+
+[node name="HealthPoint12" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 388, -26 )
+
+[node name="HealthPoint13" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1864, -11 )
+
+[node name="HealthPoint14" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1864, -26 )
+
+[node name="HealthPoint15" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1334, -585 )
+
+[node name="HealthPoint16" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1055, -585 )
+
+[node name="HealthPoint17" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 525, -1162 )
+
+[node name="HealthPoint18" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1864, -1181 )
+
+[node name="HealthPoint19" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1864, -1194 )
+
+[node name="HealthPoint20" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1864, -1208 )
+
+[node name="HealthPoint21" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 388, -1609 )
+
+[node name="HealthPoint22" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 557, -1973 )
+
+[node name="HealthPoint23" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1856, -2131 )
+
+[node name="HealthPoint9" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1821, 873 )
+
+[node name="HealthPoint10" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1208, 1136 )
+
+[node name="HealthPoint8" parent="HealthPoints" instance=ExtResource( 21 )]
+position = Vector2( 1279, 442 )
+
 [node name="Enemies" type="Node2D" parent="."]
 script = ExtResource( 7 )
 
@@ -1969,7 +2039,7 @@ position = Vector2( 1115, -1970 )
 position = Vector2( 867, -1973 )
 
 [node name="CollisionBox95" parent="Collisions" instance=ExtResource( 20 )]
-position = Vector2( 557, -1973 )
+position = Vector2( 557, -1974 )
 
 [node name="CollisionBox96" parent="Collisions" instance=ExtResource( 20 )]
 position = Vector2( 1564, -1572 )

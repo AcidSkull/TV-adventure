@@ -70,6 +70,7 @@ anims/Moving = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
 position = Vector2( 0, 10 )
 enabled = true
 cast_to = Vector2( -10, 0 )
@@ -106,6 +107,7 @@ position = Vector2( -30, 4.5 )
 shape = SubResource( 6 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
 physics_process_parent = true
 
 [connection signal="timeout" from="ChaseTimer" to="." method="_on_ChaseTimer_timeout"]

@@ -103,6 +103,7 @@ wait_time = 2.0
 autostart = true
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
 physics_process_parent = true
 
 [connection signal="body_entered" from="DetectionRange" to="." method="_on_DetectionRange_body_entered"]
