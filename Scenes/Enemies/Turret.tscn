@@ -102,6 +102,9 @@ shape = SubResource( 7 )
 wait_time = 2.0
 autostart = true
 
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+physics_process_parent = true
+
 [connection signal="body_entered" from="DetectionRange" to="." method="_on_DetectionRange_body_entered"]
 [connection signal="body_exited" from="DetectionRange" to="." method="_on_DetectionRange_body_exited"]
 [connection signal="body_entered" from="HurtBox" to="." method="_on_HurtBox_body_entered"]
