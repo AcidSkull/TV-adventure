@@ -1,4 +1,4 @@
-[gd_scene load_steps=150 format=2]
+[gd_scene load_steps=151 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Environment/Environment.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Environment/Platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Mechanics/Camera2D.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mechanics/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Mechanics/CutsceneController.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Mechanics/WorldEnvironment.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Traps/Spikes.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Traps/SawBlade.tscn" type="PackedScene" id=10]
@@ -1600,6 +1601,8 @@ tracks/0/keys = {
 }
 
 [node name="Level1" type="Node"]
+
+[node name="CutsceneController" parent="." instance=ExtResource( 7 )]
 
 [node name="WorldEnvironment" parent="." instance=ExtResource( 8 )]
 

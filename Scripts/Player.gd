@@ -26,6 +26,7 @@ var velocity = Vector2.ZERO
 var facing_right = true
 var coins = 0
 var checkpoint
+var can_move = true
 
 func _ready():
 	
@@ -41,6 +42,12 @@ func _ready():
 	_unused = connect("take_damage", camera, "add_shake_strength")
 
 func _physics_process(delta: float) -> void:
+	if !can_move:
+		if facing_right: animation.play("Idle_right")
+		else: animation.play("Idle_left")
+		return
+		
+	
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1
 		facing_right = true
@@ -113,6 +120,8 @@ func _on_HurtBox_area_entered(area):
 	if area.is_in_group("hitbox"):
 		if area.is_in_group("trap"):
 			return_when_hit_trap(area.position_to_return)
+		elif area.is_in_group("cutscene"):
+			area.start(self)
 		else:
 			damage()
 	elif area.is_in_group("coin"):

@@ -181,6 +181,7 @@ material = SubResource( 28 )
 texture = ExtResource( 1 )
 hframes = 3
 vframes = 4
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
