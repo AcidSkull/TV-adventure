@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Enemies/Enemies.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -21,6 +21,21 @@
 [ext_resource path="res://Scenes/Mechanics/Camera2D.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Enemies/Android.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/Mechanics/WorldEnvironment.tscn" type="PackedScene" id=21]
+
+[sub_resource type="Animation" id=1]
+resource_name = "cutscene"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Player:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 10, 1 ), Vector2( 1, 1 ) ]
+}
 
 [node name="LevelDebug" type="Node"]
 __meta__ = {
@@ -78,6 +93,9 @@ tile_data = PoolIntArray( 65535, 1, 0, 131071, 1, 0, 196607, 1, 0, 131118, 6, 0,
 
 [node name="CutsceneController" parent="." instance=ExtResource( 10 )]
 position = Vector2( -101, 120 )
+
+[node name="AnimationPlayer" parent="CutsceneController" index="1"]
+anims/cutscene = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -196, 122 )
@@ -236,6 +254,7 @@ position = Vector2( 13, 1 )
 position = Vector2( -79, 116 )
 coins_to_open = 2
 
+[editable path="CutsceneController"]
 [editable path="MovingPlatform"]
 [editable path="MovingPlatform2"]
 [editable path="MovingPlatform3"]
