@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/CutsceneController.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 26.5 )
+extents = Vector2( 2, 2.125 )
 
 [node name="CutsceneController" type="Node2D"]
 

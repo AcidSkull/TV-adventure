@@ -251,7 +251,7 @@ position = Vector2( -5, 30 )
 position = Vector2( 13, 1 )
 
 [node name="CellDoor" parent="." instance=ExtResource( 5 )]
-position = Vector2( -79, 116 )
+position = Vector2( -145, 110 )
 coins_to_open = 2
 
 [editable path="CutsceneController"]

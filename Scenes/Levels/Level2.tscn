@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://Assets/Textures/Environment/SkyScrapper.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -35,6 +35,8 @@
 [ext_resource path="res://Assets/Textures/Parallax/Sky.png" type="Texture" id=33]
 [ext_resource path="res://Assets/Textures/Parallax/Further_city_buildings.png" type="Texture" id=34]
 [ext_resource path="res://Scenes/Environment/CityObjects.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Scenes/Mechanics/CutsceneController.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Assets/Textures/Environment/Level2_doors.png" type="Texture" id=37]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -776,6 +778,22 @@ font_path = "res://Assets/Fonts/Hack-Bold.ttf"
 size = 17
 font_data = SubResource( 23 )
 
+[sub_resource type="Animation" id=63]
+resource_name = "cutscene"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../SkyScraper/Doors:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
 [node name="Level2" type="Node"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 676.0 ]
@@ -1011,7 +1029,7 @@ texture = ExtResource( 12 )
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -24, 505 )
+position = Vector2( -5, 504 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
@@ -3781,6 +3799,23 @@ SP. Z.O.O.
 "
 align = 1
 
+[node name="Doors" type="Sprite" parent="SkyScraper"]
+position = Vector2( 0, 277 )
+texture = ExtResource( 37 )
+hframes = 7
+
+[node name="CutsceneController" parent="." instance=ExtResource( 36 )]
+
+[node name="Area2D" parent="CutsceneController" index="0"]
+scene_to_change = "Level3"
+maximum_coins = 467
+
+[node name="CollisionShape2D" parent="CutsceneController/Area2D" index="0"]
+position = Vector2( 3898, 510.125 )
+
+[node name="AnimationPlayer" parent="CutsceneController" index="1"]
+anims/cutscene = SubResource( 63 )
+
 [editable path="MovingPlatforms/MovingPlatform"]
 [editable path="MovingPlatforms/MovingPlatform2"]
 [editable path="MovingPlatforms/MovingPlatform6"]
@@ -3802,3 +3837,4 @@ align = 1
 [editable path="MovingPlatforms/MovingPlatform3"]
 [editable path="MovingPlatforms/MovingPlatform4"]
 [editable path="MovingPlatforms/MovingPlatform5"]
+[editable path="CutsceneController"]

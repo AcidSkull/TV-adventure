@@ -24,7 +24,7 @@ export (int) var MAX_HEALTH = 5
 
 var velocity = Vector2.ZERO
 var facing_right = true
-var coins = 0
+var coins = 467
 var checkpoint
 var can_move = true
 
