@@ -780,7 +780,7 @@ font_data = SubResource( 23 )
 
 [sub_resource type="Animation" id=63]
 resource_name = "cutscene"
-length = 3.1
+length = 4.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("../SkyScraper/Doors:frame")
 tracks/0/interp = 1
@@ -792,6 +792,20 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("../Camera2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "transition_out"
+} ]
 }
 
 [node name="Level2" type="Node"]
@@ -1029,7 +1043,7 @@ texture = ExtResource( 12 )
 flip_h = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -5, 504 )
+position = Vector2( 3850, 502 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 

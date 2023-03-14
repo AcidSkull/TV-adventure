@@ -30,3 +30,6 @@ func shake():
 	
 func add_shake_strength():
 	shake_strength = min(shake_strength + 0.4, 1.0)
+
+func transition_out():
+	animation.play("transition_out")
