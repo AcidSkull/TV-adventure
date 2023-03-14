@@ -1,6 +1,7 @@
 extends Camera2D
 
 onready var player = get_parent().get_node("Player")
+onready var animation = $AnimationPlayer
 
 var decay = 0.8
 var max_offset = Vector2(25, 55)
@@ -10,6 +11,7 @@ var shake_power = 3
 
 func _ready():
 	randomize()
+	animation.play("transition_in")	
 
 func _process(delta):
 	position.x = player.position.x
