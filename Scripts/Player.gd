@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 signal killed
-signal coin_collected
+signal coin_collected(amount)
 signal heal
 signal take_damage
 signal change_health(health, heal_or_damage)
@@ -126,7 +126,7 @@ func _on_HurtBox_area_entered(area):
 			damage()
 	elif area.is_in_group("coin"):
 		coins += 1
-		emit_signal("coin_collected")
+		emit_signal("coin_collected", coins)
 		coins_sound.play()
 		area.queue_free()
 	elif area.is_in_group("health"):

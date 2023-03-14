@@ -25,6 +25,5 @@ func _on_change_health(health, heal_or_damage):
 	else:
 		images[health].texture = load("res://Assets/Textures/HUD/blank_heart.png")
 
-func _on_Player_coin_collected():
-	var tmp = int(label.text) + 1
-	label.text = str(tmp)
+func _on_Player_coin_collected(amount: int):
+	label.text = str(amount)
