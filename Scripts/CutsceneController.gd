@@ -5,7 +5,7 @@ export (String) var scene_to_change
 export (int) var maximum_coins
 
 func start(player):
-	if maximum_coins == player.coins:
+	if maximum_coins <= player.coins:
 		player.can_move = false
 		animation.play("cutscene")
 		yield(animation, "animation_finished")

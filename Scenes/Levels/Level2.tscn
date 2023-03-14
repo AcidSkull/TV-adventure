@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://Assets/Textures/Environment/SkyScrapper.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -37,6 +37,7 @@
 [ext_resource path="res://Scenes/Environment/CityObjects.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Scenes/Mechanics/CutsceneController.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Assets/Textures/Environment/Level2_doors.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Sounds/270338__littlerobotsoundfactory__open_01.wav" type="AudioStream" id=38]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -806,6 +807,44 @@ tracks/1/keys = {
 "args": [  ],
 "method": "transition_out"
 } ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 38 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 38 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 38 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 38 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 38 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 38 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 38 )
+} ],
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3 )
 }
 
 [node name="Level2" type="Node"]
@@ -3829,6 +3868,9 @@ position = Vector2( 3898, 510.125 )
 
 [node name="AnimationPlayer" parent="CutsceneController" index="1"]
 anims/cutscene = SubResource( 63 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CutsceneController"]
+stream = ExtResource( 38 )
 
 [editable path="MovingPlatforms/MovingPlatform"]
 [editable path="MovingPlatforms/MovingPlatform2"]
