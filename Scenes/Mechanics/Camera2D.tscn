@@ -137,6 +137,7 @@ tracks/1/keys = {
 }
 
 [node name="Camera2D" type="Camera2D"]
+visible = false
 z_index = 1000
 current = true
 script = ExtResource( 1 )

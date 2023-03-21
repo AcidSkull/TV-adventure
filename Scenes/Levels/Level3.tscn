@@ -855,6 +855,10 @@ tracks/2/keys = {
 }
 
 [node name="Level3" type="Node"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -81.0, 6.0, 3928.0 ],
+"_edit_vertical_guides_": [ 312.0, 1944.0 ]
+}
 
 [node name="OfficeBackground" type="Sprite" parent="."]
 position = Vector2( 1128, 1990 )
@@ -868,6 +872,10 @@ __meta__ = {
 
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 152, 92 )
+limit_left = 321
+limit_top = 6
+limit_right = 1944
+limit_bottom = 3928
 
 [node name="Environment" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0, 2256 )
@@ -5284,7 +5292,7 @@ hframes = 8
 position = Vector2( 1161, 209 )
 
 [node name="Area2D" parent="CutsceneController" index="0"]
-scene_to_change = "Level1"
+scene_to_change = "Level4"
 maximum_coins = 747
 
 [node name="CollisionShape2D" parent="CutsceneController/Area2D" index="0"]

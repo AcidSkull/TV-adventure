@@ -12,6 +12,7 @@ var shake_power = 3
 func _ready():
 	randomize()
 	animation.play("transition_in")	
+	show()
 
 func _process(delta):
 	position.x = player.position.x
