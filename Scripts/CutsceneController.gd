@@ -10,5 +10,6 @@ func start(player):
 		animation.play("cutscene")
 		yield(animation, "animation_finished")
 		player.can_move = true
-		var _tmp = get_tree().change_scene("res://Scenes/Levels/" + scene_to_change + ".tscn")
+		if scene_to_change != "":
+			var _tmp = get_tree().change_scene("res://Scenes/Levels/" + scene_to_change + ".tscn")
 	
