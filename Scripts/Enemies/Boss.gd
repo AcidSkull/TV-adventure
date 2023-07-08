@@ -1,25 +1,49 @@
 extends Node2D
 
-onready var missle = preload("res://Scenes/Traps/Missle.tscn")
+onready var tractor = preload("res://Scenes/Enemies/Tractor.tscn")
+onready var android = preload("res://Scenes/Enemies/Android.tscn")
 
-var phase = 0
+onready var player = get_tree().root.get_node("Level4/Player")
+onready var spawn1 = $Spawn1
+onready var spawn2 = $Spawn2
+onready var cooldown = $attackLatency
+onready var enemies = get_tree().root.get_node("Level4/Enemies")
 
-var is_attacking: bool = false
+var turn = 0
 
 func start_boss_fight():
-	phase += 1
-	is_attacking = true
+	spawn_enemies()
+	cooldown.start()
+	get_tree().root.get_node("Level4/CutsceneController").queue_free()
+	player.can_move = true
+	get_tree().root.get_node("Level4/Blockade").show()
 
-func choose_attack(max_value: int) -> int:
+func spawn_enemies():
 	var rng = RandomNumberGenerator.new()
-	var random_number = rng.randi_range(0, max_value)
-	return random_number
+	rng.randomize()
+	var random_number = rng.randi_range(1, 2)
+	var enemy
+	match random_number:
+		1:
+			enemy = tractor.instance()
+		2:
+			enemy = android.instance()
+	
+	rng.randomize()
+	random_number = rng.randi_range(1, 2)
+	match random_number:
+		1:
+			enemy.position = spawn1.position
+		2:
+			enemy.position = spawn2.position
+	enemies.add_child(enemy)
 
-func shoot_missles():
-	pass
-
-func _process(delta):
-	if is_attacking:
-		match phase:
-			1:
-				pass
+func _on_attackLatency_timeout():
+	if turn == 15:
+		cooldown.stop()
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var random_number = rng.randi_range(4, 6)
+	for _i in range(0, random_number):
+		spawn_enemies()
+	turn += 1
