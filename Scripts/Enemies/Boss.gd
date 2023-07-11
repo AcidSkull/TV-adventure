@@ -4,10 +4,10 @@ onready var tractor = preload("res://Scenes/Enemies/Tractor.tscn")
 onready var android = preload("res://Scenes/Enemies/Android.tscn")
 
 onready var player = get_tree().root.get_node("Level4/Player")
+onready var enemies = get_tree().root.get_node("Level4/Enemies")
 onready var spawn1 = $Spawn1
 onready var spawn2 = $Spawn2
 onready var cooldown = $attackLatency
-onready var enemies = get_tree().root.get_node("Level4/Enemies")
 
 var turn = 0
 
@@ -43,7 +43,8 @@ func _on_attackLatency_timeout():
 		cooldown.stop()
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var random_number = rng.randi_range(4, 6)
+	var random_number = rng.randi_range(2, 5)
 	for _i in range(0, random_number):
+		yield(get_tree().create_timer(0.2), "timeout")
 		spawn_enemies()
 	turn += 1
