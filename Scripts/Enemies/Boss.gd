@@ -16,7 +16,7 @@ func start_boss_fight():
 	cooldown.start()
 	get_tree().root.get_node("Level4/CutsceneController").queue_free()
 	player.can_move = true
-	get_tree().root.get_node("Level4/Blockade").show()
+	get_tree().root.get_node("Level4/Blockade").position.x = 0
 
 func spawn_enemies():
 	var rng = RandomNumberGenerator.new()
