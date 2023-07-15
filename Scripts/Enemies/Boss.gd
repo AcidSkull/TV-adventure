@@ -9,7 +9,11 @@ onready var spawn1 = $Spawn1
 onready var spawn2 = $Spawn2
 onready var cooldown = $attackLatency
 
-var turn = 0
+var turn = 1
+
+func _ready():
+	var tmp = get_node("Area2D")
+	tmp.connect("body_entered", self, "_on_HurtBox_body_entered")
 
 func start_boss_fight():
 	spawn_enemies()
@@ -39,8 +43,8 @@ func spawn_enemies():
 	enemies.add_child(enemy)
 
 func _on_attackLatency_timeout():
-	if turn == 15:
-		cooldown.stop()
+	if turn >= 15:
+		return
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var random_number = rng.randi_range(2, 5)
@@ -48,3 +52,10 @@ func _on_attackLatency_timeout():
 		yield(get_tree().create_timer(0.2), "timeout")
 		spawn_enemies()
 	turn += 1
+
+func _process(_delta):
+	if turn >= 2 and enemies.get_child_count() == 0:
+		get_tree().root.get_node("Level4/MovingPlatform").position.x = 1511
+
+func _on_HurtBox_body_entered(_body):
+	print("u win")
