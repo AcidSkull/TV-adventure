@@ -47,7 +47,6 @@ func _physics_process(delta: float) -> void:
 		if facing_right: animation.play("Idle_right")
 		else: animation.play("Idle_left")
 		return
-		
 	
 	if Input.is_action_pressed("move_right"):
 		velocity.x = 1
