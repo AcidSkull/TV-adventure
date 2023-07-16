@@ -12,4 +12,3 @@ func start(player):
 		player.can_move = true
 		if scene_to_change != "":
 			var _tmp = get_tree().change_scene("res://Scenes/Levels/" + scene_to_change + ".tscn")
-	

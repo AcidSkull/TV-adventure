@@ -11,10 +11,6 @@ onready var cooldown = $attackLatency
 
 var turn = 1
 
-func _ready():
-	var tmp = get_node("Area2D")
-	tmp.connect("body_entered", self, "_on_HurtBox_body_entered")
-
 func start_boss_fight():
 	spawn_enemies()
 	cooldown.start()
@@ -57,5 +53,3 @@ func _process(_delta):
 	if turn >= 2 and enemies.get_child_count() == 0:
 		get_tree().root.get_node("Level4/MovingPlatform").position.x = 1511
 
-func _on_HurtBox_body_entered(_body):
-	print("u win")
