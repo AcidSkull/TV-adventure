@@ -306,7 +306,7 @@ position = Vector2( 1000, 0 )
 position = Vector2( 1305, 94.5 )
 scale = Vector2( 1, 1.31132 )
 frames = SubResource( 5 )
-frame = 2
+frame = 4
 playing = true
 __meta__ = {
 "_edit_group_": true,
