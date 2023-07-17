@@ -34,3 +34,19 @@ func add_shake_strength():
 
 func transition_out():
 	animation.play("transition_out")
+
+func that_one_function_to_final_cutscene():
+	self.limit_left = 1320
+	self.limit_right = 1624
+	self.limit_bottom = -136
+	self.limit_top = -305
+	var beach = get_tree().root.get_node("Level4/Beach")
+	beach.position.x = 1320
+	beach.position.y = -300
+	var tmp = get_tree().root.get_node("Level4/Platform")
+	tmp.position.x = 2000
+
+func anothe_function_for_final_cutscene():
+	var tmp = get_tree().root.get_node("Level4/CutsceneController2")
+	tmp.position.x = 2000
+	

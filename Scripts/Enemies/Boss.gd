@@ -50,6 +50,6 @@ func _on_attackLatency_timeout():
 	turn += 1
 
 func _process(_delta):
-	if turn >= 2 and enemies.get_child_count() == 0:
+	if turn >= 15 and enemies.get_child_count() == 0:
 		get_tree().root.get_node("Level4/MovingPlatform").position.x = 1511
 

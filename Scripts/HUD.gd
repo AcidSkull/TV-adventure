@@ -6,6 +6,7 @@ var max_health
 onready var label = $VBoxContainer/CoinContainer/Label
 
 func _ready():
+	show()
 	max_health = get_parent().get_node("Player").MAX_HEALTH
 	var life_container = $VBoxContainer/LifeContainer
 	
