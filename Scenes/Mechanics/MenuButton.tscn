@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Fonts/8-bit Arcade In.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/MenuButton.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sounds/mixkit-camera-shutter-click-1133.wav" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
@@ -34,3 +36,10 @@ custom_colors/font_color_focus = Color( 0.956863, 0.956863, 0.0470588, 1 )
 custom_colors/font_color_hover = Color( 0.956863, 0.956863, 0.0470588, 1 )
 custom_fonts/font = SubResource( 1 )
 icon_align = 1
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 3.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_MenuButton_mouse_entered"]

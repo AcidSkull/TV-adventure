@@ -24,7 +24,7 @@ coin_sounds by Luke.RUSTLTD licensed CC0: https://creativecommons.org/publicdoma
 heal_sound by leohpaz licensed CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
 explosion by dklon licensed CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
 crack by Independent.nu licensed CC0: https://creativecommons.org/publicdomain/zero/1.0/
-door_open, mixkit-fast-small-sweep-transition-166, mixkit-fast-small-sweep-transition-166-reverse, mixkit-truck-start-engine-1623 by mixkit licensed by mixkit User Terms: https://mixkit.co/terms/
+door_open, mixkit-fast-small-sweep-transition-166, mixkit-fast-small-sweep-transition-166-reverse, mixkit-truck-start-engine-1623, mixkit-camera-shutter-click-1133 by mixkit licensed by mixkit User Terms: https://mixkit.co/terms/
 circular-saw from https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=25584
 brick-crushing by Mountain852 licensed CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/
 270338__littlerobotsoundfactory__open_01 by LittleRobotSoundFactory licensed CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
