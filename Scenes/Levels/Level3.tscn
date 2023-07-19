@@ -4287,7 +4287,6 @@ position = Vector2( 633, 3036 )
 position = Vector2( 969, 2522 )
 
 [node name="Collisions" type="Node2D" parent="."]
-visible = false
 position = Vector2( 0, 2256 )
 
 [node name="CollisionBox" parent="Collisions" instance=ExtResource( 20 )]
@@ -4342,7 +4341,10 @@ position = Vector2( 939, -1379 )
 position = Vector2( 939, -1347 )
 
 [node name="CollisionBox83" parent="Collisions" instance=ExtResource( 20 )]
-position = Vector2( 699, -1608 )
+position = Vector2( 699, -1603 )
+
+[node name="CollisionBox99" parent="Collisions" instance=ExtResource( 20 )]
+position = Vector2( 699, -1614 )
 
 [node name="CollisionBox84" parent="Collisions" instance=ExtResource( 20 )]
 position = Vector2( 695, -1630 )
